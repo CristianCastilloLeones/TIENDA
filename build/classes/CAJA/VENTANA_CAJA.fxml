@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="892.0" prefWidth="1579.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAJA.VENTANA_CAJAController">
+  <tabs>
+    <Tab text="GESTOR DE COBRO">
+      <content>
+        <AnchorPane fx:id="COBROS" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+    <Tab text="GENERADOR DE FACTURA">
+      <content>
+        <AnchorPane fx:id="GENERADOR" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+      <Tab text="REPORTE DE PAGO">
+        <content>
+          <AnchorPane fx:id="REPORTEDEPAGO" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="GENERAR Y AUTORIZAR">
+        <content>
+          <AnchorPane fx:id="generaryautorizar" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+      <Tab text="REVISION DEPOSITOS">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="tabladepositos" layoutX="56.0" layoutY="122.0" prefHeight="582.0" prefWidth="745.0">
+                    <columns>
+                        <TableColumn fx:id="IDREGISTRO" prefWidth="88.0" text="ID REGISTRO" />
+                      <TableColumn fx:id="ndocumento" prefWidth="210.0" text="N° Documento" />
+                      <TableColumn fx:id="cliente" prefWidth="75.0" text="CLIENTE" />
+                        <TableColumn fx:id="fecha" prefWidth="75.0" text="FECHA" />
+                        <TableColumn fx:id="valor" prefWidth="75.0" text="VALOR" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <TextField fx:id="NDOCUMENTO" layoutX="56.0" layoutY="56.0" prefHeight="49.0" prefWidth="446.0" promptText="INGRESE EL N° DE DOCUMENTO">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="VERIFICAR" layoutX="515.0" layoutY="56.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="282.0" text="VERIFCAR" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="FACTURACION">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="TABLADETALLES" layoutX="69.0" layoutY="126.0" prefHeight="516.0" prefWidth="745.0">
+                    <columns>
+                      <TableColumn fx:id="IDDETALLE" prefWidth="108.0" text="N° FACTURA" />
+                      <TableColumn fx:id="DETALLE" prefWidth="84.0" text="DETALLE" />
+                        <TableColumn fx:id="VALORTOTAL" prefWidth="116.0" text="VALOR TOTAL" />
+                        <TableColumn fx:id="CLIENTE" prefWidth="75.0" text="CLIENTE" />
+                        <TableColumn fx:id="FACTSRI" prefWidth="75.0" text="N° FACT SRI" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <RadioButton fx:id="FACTACTIVAS" layoutX="88.0" layoutY="38.0" mnemonicParsing="false" text="POR COBRAR" />
+                  <RadioButton fx:id="FACTINACTIVAS" layoutX="202.0" layoutY="38.0" mnemonicParsing="false" text="COBRADAS" />
+                  <RadioButton fx:id="FACTANULADAS" layoutX="316.0" layoutY="38.0" mnemonicParsing="false" text="ANULADAS" />
+                  <ComboBox fx:id="DETALLEcomo" layoutX="86.0" layoutY="61.0" prefHeight="25.0" prefWidth="318.0" promptText="SELECCIONE EL TIPO DE DETALLE" />
+                  <Button fx:id="BUSCAR" layoutX="419.0" layoutY="86.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="392.0" text="BUSCAR" />
+                  <Label layoutX="74.0" layoutY="676.0" text="Total de Resultados :" />
+                  <Label layoutX="72.0" layoutY="711.0" prefHeight="17.0" prefWidth="125.0" text="Valor Total Monetario:" />
+                  <Label fx:id="TOTALREGISTROS" alignment="CENTER" layoutX="213.0" layoutY="676.0" prefHeight="17.0" prefWidth="161.0" text="0" />
+                  <Label fx:id="VALORMONETARIO" alignment="CENTER" contentDisplay="CENTER" layoutX="202.0" layoutY="711.0" prefHeight="17.0" prefWidth="182.0" text="0" />
+                  <TextField fx:id="CEDULACLIENTE" layoutX="419.0" layoutY="34.0" prefHeight="44.0" prefWidth="388.0" promptText="Ingrese el N° de Cedula" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

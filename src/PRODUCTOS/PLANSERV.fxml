@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="1673.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PRODUCTOS.PLANSERVController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1667.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <Label layoutX="1375.0" layoutY="37.0" text="MODULO PLANES Y SERVICIOS - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Rectangle height="30.0" layoutX="17.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#e4dd08" />
+                        <Stop color="#eaeaea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="47.0" layoutY="13.0" text="Planes y Servicios">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="18.0" layoutY="44.0" prefHeight="3.0" prefWidth="1289.0" />
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-estrella-relleno-48.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="19.0" layoutY="56.0" prefHeight="608.0" prefWidth="1637.0">
+         <children>
+            <TableView fx:id="planes" layoutX="14.0" layoutY="76.0" prefHeight="306.0" prefWidth="1605.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="145.0" text="Id" />
+                <TableColumn fx:id="plan" prefWidth="392.0" text="Plan" />
+                  <TableColumn fx:id="bajada" prefWidth="263.0" text="Downstream Mbps" />
+                  <TableColumn fx:id="subida" prefWidth="139.0" text="Upstream Mbps" />
+                  <TableColumn fx:id="ancho" prefWidth="188.0" text="Ratio :" />
+                  <TableColumn fx:id="conparticion" prefWidth="188.0" text="Peers" />
+                  <TableColumn fx:id="activos" prefWidth="154.0" text="Activos" />
+                  <TableColumn fx:id="cortados" prefWidth="109.0" text="Cortados" />
+              </columns>
+            </TableView>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="90.0" text="+ Nuevo" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

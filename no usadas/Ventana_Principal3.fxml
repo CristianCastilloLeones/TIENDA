@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="1037.0" prefWidth="1921.0" style="-fx-background-color: eaeaea; -fx-background-size: stretch;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.Ventana_PrincipalController">
+   <children>
+      <AnchorPane prefHeight="151.0" prefWidth="216.0" style="-fx-background-color: eaeaea;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="168.0" layoutX="34.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="21.0">
+               <image>
+                  <Image url="@../imagenes/logo-aircontrol-nuevo.png" />
+               </image></ImageView>
+            <Label layoutX="87.0" layoutY="105.0" text="Software de Control ISP v 1.0" textFill="#c6c6c6" AnchorPane.leftAnchor="87.0" AnchorPane.topAnchor="105.0">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane cache="true" layoutX="214.0" prefHeight="151.0" prefWidth="1704.0" style="-fx-background-color: #eaeaea;" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="1093.0" layoutY="17.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="52.0" AnchorPane.rightAnchor="560.0" AnchorPane.topAnchor="17.0">
+               <effect>
+                  <DropShadow color="#b9b0b0" height="0.0" radius="18.0925" width="74.37" />
+               </effect></Button>
+            <TextField fx:id="cliente3" layoutX="430.0" layoutY="101.0" prefHeight="25.0" prefWidth="604.0" promptText="Ingresa texto a buscar" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="101.0" />
+            <Separator layoutX="430.0" layoutY="75.0" prefHeight="0.0" prefWidth="1079.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="75.0" />
+            <ImageView fx:id="botonactualizar" fitHeight="27.0" fitWidth="33.0" layoutX="927.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="751.0" AnchorPane.topAnchor="100.0">
+               <image>
+                  <Image url="@../imagenes/icons8-search-client-48.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="BuscarCliente" layoutX="1576.0" layoutY="101.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Buscar" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="101.0" />
+            <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="1610.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../imagenes/logo-aircontrol-nuevo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="32.0" layoutX="1104.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="570.0" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../imagenes/icons8-notification-48.png" />
+               </image>
+            </ImageView>
+                  <Pane layoutX="1273.0" layoutY="21.0" prefHeight="39.0" prefWidth="328.0" AnchorPane.rightAnchor="104.0" AnchorPane.topAnchor="21.0">
+                     <children>
+                        <Label fx:id="usuario" layoutX="6.0" layoutY="4.0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                  <Label fx:id="usuario" layoutX="14.0" layoutY="11.0" prefHeight="17.0" prefWidth="307.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                     </children>
+                  </Pane>
+            <Label layoutX="1234.0" layoutY="30.0" text="Hola," AnchorPane.rightAnchor="435.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="actualizarlistacliente" layoutX="1155.0" layoutY="17.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="52.0" AnchorPane.rightAnchor="498.0" AnchorPane.topAnchor="17.0">
+               <effect>
+                  <DropShadow color="#b9b0b0" height="0.0" radius="18.0925" width="74.37" />
+               </effect>
+            </Button>
+            <ImageView fx:id="imagenactua" fitHeight="25.0" fitWidth="26.0" layoutX="1169.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="511.0" AnchorPane.topAnchor="25.0">
+               <image>
+                  <Image url="@../imagenes/icons8-sincronizar-48.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      
+        
+            <AnchorPane fx:id="content" blendMode="DARKEN" layoutX="223.0" layoutY="151.0" minHeight="-Infinity" minWidth="-Infinity" prefWidth="1698.0" style="-fx-background-position: center center;" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="151.0">
+               <children>
+                  <AnchorPane fx:id="content" cache="true" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: eaeaea; -fx-background-size: cover; -fx-background-position: center center;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane fx:id="ClienteActivos" layoutX="16.0" layoutY="55.0" prefHeight="103.0" style="-fx-background-image: ..;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="1434.0" AnchorPane.topAnchor="54.0">
+                           <children>
+                        <ImageView fitHeight="109.0" fitWidth="250.0" layoutX="-3.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/clientes-activos.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="14.0" layoutY="14.0" text="Clientes Activos" textFill="#f8f6f6" />
+                              <Separator layoutX="14.0" layoutY="69.0" prefWidth="200.0" />
+                              <Label layoutX="14.0" layoutY="72.0" text="Total Registrados" textFill="#f8f6f6" />
+                              <Label fx:id="registrados" layoutX="127.0" layoutY="72.0" text="3567" textAlignment="RIGHT" textFill="WHITE" />
+                              <Label fx:id="activos" layoutX="14.0" layoutY="32.0" text="3378" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="227.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/icons8-más-de-30.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="tikinstala" layoutX="283.0" layoutY="55.0" prefHeight="103.0" AnchorPane.leftAnchor="282.0" AnchorPane.rightAnchor="1167.0" AnchorPane.topAnchor="54.0">
+                           <children>
+                        <ImageView fitHeight="109.0" fitWidth="250.0" layoutX="-2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/tickets-instalaciones.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="14.0" layoutY="14.0" text="Tickets de Instalaciones" textFill="WHITE" />
+                              <Separator layoutX="14.0" layoutY="69.0" prefWidth="200.0" />
+                              <Label layoutX="14.0" layoutY="71.0" text="Nuevas" textFill="#f8f6f6" />
+                              <Label layoutX="108.0" layoutY="71.0" text="12" textAlignment="RIGHT" textFill="WHITE" />
+                              <Label fx:id="instalaciones" layoutX="14.0" layoutY="32.0" text="12" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="233.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/icons8-más-de-30.png" />
+                                 </image>
+                              </ImageView>
+                              <Hyperlink fx:id="vertodtasinstalaciones" layoutX="176.0" layoutY="71.0" text="Ver todas" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="tikreapa" layoutX="546.0" layoutY="54.0" prefHeight="103.0" AnchorPane.leftAnchor="546.0" AnchorPane.rightAnchor="898.0" AnchorPane.topAnchor="54.0">
+                           <children>
+                        <ImageView fitHeight="109.0" fitWidth="250.0" layoutX="2.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/tickets-reparaciones.png" />
+                           </image>
+                        </ImageView>
+                              <Separator layoutX="14.0" layoutY="66.0" prefWidth="200.0" />
+                              <Label layoutX="18.0" layoutY="14.0" text="Tickets de Reparaciones" textFill="WHITE" />
+                              <Label layoutX="14.0" layoutY="68.0" text="Total sin Procesar" textFill="#f8f6f6" />
+                              <Label layoutX="131.0" layoutY="68.0" text="23" textAlignment="RIGHT" textFill="WHITE" />
+                              <Label fx:id="reparaciones" layoutX="18.0" layoutY="32.0" text="19" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="238.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/icons8-más-de-30.png" />
+                                 </image>
+                              </ImageView>
+                              <Hyperlink fx:id="vertikecks" layoutX="174.0" layoutY="67.0" text="Ver tickets" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="tikretiro" layoutX="812.0" layoutY="54.0" prefHeight="103.0" AnchorPane.leftAnchor="810.0" AnchorPane.rightAnchor="636.0" AnchorPane.topAnchor="53.0">
+                           <children>
+                        <ImageView fitHeight="109.0" fitWidth="250.0" layoutX="5.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/tickets-retiros.png" />
+                           </image>
+                        </ImageView>
+                              <Label layoutX="25.0" layoutY="14.0" text="Tickets de Retiro" textFill="#f8f6f6" />
+                              <Separator layoutX="14.0" layoutY="66.0" prefWidth="200.0" />
+                              <Label layoutX="23.0" layoutY="67.0" text="Vencidas" textFill="#f8f6f6" />
+                              <Label layoutX="114.0" layoutY="67.0" text="11" textAlignment="RIGHT" textFill="WHITE" />
+                              <Label fx:id="retiros" layoutX="23.0" layoutY="32.0" text="45" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="17.0" fitWidth="13.0" layoutX="228.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imagenes/icons8-más-de-30.png" />
+                                 </image>
+                              </ImageView>
+                              <Hyperlink layoutX="164.0" layoutY="65.0" text="Ver todas" textFill="WHITE" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="mapa" layoutX="16.0" layoutY="206.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1054.0" style="-fx-border-color: #2E8B57;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="611.0" AnchorPane.topAnchor="205.0" />
+                  <Separator layoutX="18.0" layoutY="42.0" prefHeight="3.0" prefWidth="1054.0" />
+                  <Label layoutX="18.0" layoutY="170.0" text="Mapa de Cobertura">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="18.0" layoutY="194.0" prefHeight="3.0" prefWidth="1054.0" />
+                  <AnchorPane fx:id="mensajeria" layoutX="1107.0" layoutY="196.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="532.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="196.0">
+                     <children>
+                        <ImageView fitHeight="580.0" fitWidth="532.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/barchat.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="24.0" layoutY="27.0" text="Mensajero Aircontrol " textFill="#fcc100" />
+                        <TextField layoutX="327.0" layoutY="74.0" prefHeight="25.0" prefWidth="175.0" promptText="Buscar Usuario" />
+                        <TableView layoutX="24.0" layoutY="74.0" prefHeight="105.0" prefWidth="298.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Usuario" />
+                            <TableColumn prefWidth="75.0" text="IP" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="368.0" layoutY="134.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="93.0" text="Refrescar">
+                           <effect>
+                              <DropShadow color="#b9b0b0" height="0.0" radius="18.0925" width="74.37" />
+                           </effect>
+                        </Button>
+                        <Label layoutX="327.0" layoutY="110.0" text="En Línea" />
+                        <Label layoutX="406.0" layoutY="110.0" text="2/2" />
+                        <TextArea layoutX="24.0" layoutY="202.0" prefHeight="241.0" prefWidth="483.0" />
+                        <Button layoutX="24.0" layoutY="452.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="121.0" text="Adjuntar">
+                           <effect>
+                              <DropShadow color="#b9b0b0" height="0.0" radius="18.0925" width="74.37" />
+                           </effect>
+                        </Button>
+                        <ImageView fitHeight="23.0" fitWidth="25.0" layoutX="38.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/icons8-attach-50.png" />
+                           </image>
+                        </ImageView>
+                        <CheckBox layoutX="190.0" layoutY="462.0" mnemonicParsing="false" text="Bloquear" />
+                        <Button layoutX="402.0" layoutY="452.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="105.0" text="Enviar">
+                           <effect>
+                              <DropShadow color="#b9b0b0" height="0.0" radius="18.0925" width="74.37" />
+                           </effect>
+                        </Button>
+                        <CheckBox layoutX="279.0" layoutY="462.0" mnemonicParsing="false" text="No Disponible" />
+                     </children>
+                  </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         
+      
+      <AnchorPane layoutX="7.0" layoutY="150.0" prefHeight="775.0" prefWidth="210.0" style="-fx-background-color: eaeaea;" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="1704.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Separator layoutX="14.0" layoutY="42.0" prefHeight="3.0" prefWidth="186.0" />
+            <Button fx:id="inico" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Inicio" />
+            <Button fx:id="clientes" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Clientes" />
+            <Button fx:id="planesyservicios" layoutX="14.0" layoutY="187.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Productos" />
+            <Button fx:id="serviciotecnico" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Soporte" />
+            <Button fx:id="caja" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Caja" />
+            <Button fx:id="bodega" layoutX="14.0" layoutY="391.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Button>
+            <Button fx:id="reportes" layoutX="13.0" layoutY="459.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Button>
+            <Button fx:id="gestionderedes" layoutX="12.0" layoutY="527.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Button>
+            <Button fx:id="contabilidad" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Button>
+            <Button fx:id="ajustes" layoutX="12.0" layoutY="664.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0">
+               <effect>
+                  <GaussianBlur />
+               </effect></Button>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-página-principal-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-connected-people-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-estrella-relleno-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-sin-red-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-vieja-caja-registradora-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-mover-por-carretilla-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="472.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-eye-checked-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-tecnología-blockchain-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-contabilidad-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="26.0" layoutY="677.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-engranaje-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="78.0" layoutY="412.0" text="Bodega">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="78.0" layoutY="480.0" text="Reportes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="548.0" text="Gestion de Redes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="617.0" text="Contabilidad">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="685.0" text="Ajustes">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Separator layoutX="224.0" layoutY="194.0" orientation="VERTICAL" prefHeight="775.0" prefWidth="2.0" />
+      <Label layoutX="32.0" layoutY="976.0" prefHeight="36.0" prefWidth="152.0" text="Desarrollado por Airfiber S.A 2020." textFill="#615e5e" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="1736.0" AnchorPane.topAnchor="976.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="486.0" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LOGISTICA.NEWPROController">
+   <children>
+      <Pane layoutX="24.0" layoutY="24.0" prefHeight="440.0" prefWidth="446.0" style="-fx-background-color: #D3D3D3;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="24.0">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" text="Categoria" />
+            <Label layoutX="14.0" layoutY="64.0" text="Proveedor" />
+            <Label layoutX="14.0" layoutY="124.0" text="Precio de Venta o Alquiler" />
+            <Label layoutX="14.0" layoutY="184.0" text="Serie N°" />
+            <Label layoutX="14.0" layoutY="240.0" text="PON N°" />
+            <Button fx:id="guard" layoutX="83.0" layoutY="452.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="GUARDAR" />
+            <Button fx:id="cerr" layoutX="223.0" layoutY="452.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="GUARDAR" />
+            <TextField fx:id="mac" layoutX="13.0" layoutY="314.0" prefHeight="33.0" prefWidth="390.0" />
+            <Label layoutX="14.0" layoutY="297.0" text="Mac N°" />
+            <Label layoutX="13.0" layoutY="347.0" text="Lote" />
+            <TextField fx:id="Lote" layoutX="14.0" layoutY="364.0" prefHeight="33.0" prefWidth="390.0" />
+            <Label layoutX="15.0" layoutY="397.0" text="Metraje" />
+            <TextField fx:id="metraje" disable="true" layoutX="15.0" layoutY="414.0" prefHeight="33.0" prefWidth="390.0" />
+            <CheckBox fx:id="cheecknuevabobina" layoutX="223.0" layoutY="153.0" mnemonicParsing="false" text="Ingreso de Nueva Bobina" />
+            <CheckBox fx:id="incgresomultiple" layoutX="223.0" layoutY="124.0" mnemonicParsing="false" text="Ingreso Multiple" />
+         </children>
+      </Pane>
+      <ComboBox fx:id="cat" layoutX="36.0" layoutY="45.0" prefHeight="33.0" prefWidth="390.0" promptText="Seleccione una Categoria" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="60.0" />
+      <ComboBox fx:id="pro" layoutX="36.0" layoutY="107.0" prefHeight="33.0" prefWidth="390.0" promptText="Selecione el proveedor" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="60.0" />
+      <TextField fx:id="precio" layoutX="36.0" layoutY="169.0" prefHeight="33.0" prefWidth="204.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="246.0" />
+      <TextField fx:id="serie" layoutX="36.0" layoutY="226.0" prefHeight="33.0" prefWidth="390.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="60.0" />
+      <TextField fx:id="pon" layoutX="36.0" layoutY="282.0" prefHeight="33.0" prefWidth="390.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="60.0" />
+      <Label layoutX="24.0" layoutY="2.0" text="Nuevo Producto">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

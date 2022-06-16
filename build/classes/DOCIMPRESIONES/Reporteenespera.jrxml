@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3d37c0f8-654e-4acb-9171-b9939502ef10">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#908181">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFE6E6">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#FFF8F8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Tabla" uuid="4b4440d9-c1eb-4c99-8b6c-dd33e98768d9">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM [BDAirnet].[dbo].[tickets] where estado = 'Espera' and respuesta=' ']]>
+		</queryString>
+		<field name="numero" class="java.lang.String"/>
+		<field name="usuario" class="java.lang.String"/>
+		<field name="asunto" class="java.lang.String"/>
+		<field name="tecnico" class="java.lang.String"/>
+		<field name="fecha" class="java.lang.String"/>
+		<field name="direccion" class="java.lang.String"/>
+		<field name="detalle" class="java.lang.String"/>
+		<field name="estado" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="CONDICION" class="java.lang.String"/>
+	<parameter name="CONDICION2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM [BDAirnet].[dbo].[tickets] where estado = $P{CONDICION} and respuesta=$P{CONDICION2}]]>
+	</queryString>
+	<field name="idval" class="java.lang.Integer"/>
+	<field name="numero" class="java.lang.String"/>
+	<field name="departamento" class="java.lang.String"/>
+	<field name="usuario" class="java.lang.String"/>
+	<field name="asunto" class="java.lang.String"/>
+	<field name="tecnico" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<field name="abiertopor" class="java.lang.String"/>
+	<field name="fechatrabajo" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="detalle" class="java.lang.String"/>
+	<field name="evidencia" class="java.lang.String"/>
+	<field name="fechainicio" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="materialesusados" class="java.lang.String"/>
+	<field name="comentario" class="java.lang.String"/>
+	<field name="respuesta" class="java.lang.String"/>
+	<field name="IDCLIENTE" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement x="10" y="23" width="63" height="20" uuid="0224b02f-769d-4a4c-9160-42b92b2c6653"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="251" y="23" width="111" height="20" uuid="e5a95568-4c8e-4916-ba68-4199bda524b0"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="362" y="23" width="85" height="20" uuid="a7f22efd-6f53-40a3-93fb-8e40f68f3255"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="10" y="23" width="773" height="20" uuid="53e85838-5f20-4dc5-bfdd-6d40f171ce2f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="227" y="0" width="270" height="20" uuid="ce38f792-3fa1-46c1-8f35-86e60ac42395"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Ticket's Airnet  by Airfiber]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="610" y="23" width="100" height="20" uuid="5b98fd2d-bf33-45ae-a61d-676a878af0a2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="73" y="23" width="178" height="20" uuid="319597e4-cd25-495f-960f-bec4faacdc17"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="447" y="23" width="263" height="20" uuid="c1266339-ec7e-483d-a469-b0bbb0f9f55f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="24" width="63" height="20" uuid="01161887-ccb3-463a-98fd-8cfdf0d217a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="24" width="178" height="20" uuid="9a320b4f-6f1d-40f7-9e79-2fd1c514127b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="24" width="110" height="20" uuid="68141fd2-fa0c-4f58-bee2-d5f72d564765"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Asunto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="23" width="85" height="20" uuid="c5b44afa-c21c-4a9e-bc5e-f1989eecd7c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="23" width="263" height="20" uuid="9e93d165-768e-46fa-9075-04442dc6a6eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="710" y="24" width="73" height="20" uuid="415aabfa-3647-4f6e-81b0-ab2d8dee42e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<rectangle>
+				<reportElement x="11" y="1" width="773" height="20" uuid="a8647fea-fc63-46bd-8410-0f0ee192cdfa"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="11" y="1" width="63" height="20" uuid="7c779911-4387-4e4c-9a88-1d1a362140bb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="74" y="1" width="178" height="20" uuid="8d9c67e0-df24-4de7-8efc-1d7009be2a6d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="252" y="1" width="111" height="20" uuid="07a8013b-5e29-4c9a-89c9-205d4c1ca40a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="363" y="1" width="85" height="20" uuid="8a6a0e57-06d7-4c54-a2b7-c502a92f44e5"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="448" y="1" width="262" height="20" uuid="953442a5-7ad0-4757-9565-3f54537b761d"/>
+			</rectangle>
+			<textField>
+				<reportElement x="17" y="1" width="63" height="20" uuid="36d31eab-e0dd-40e1-b752-fccb4c0959a5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="74" y="1" width="178" height="20" uuid="10d87ead-dec4-4b45-993a-2a0c0c39b68e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="1" width="85" height="20" uuid="461c35be-01f5-4e40-8b99-34e557524b19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="448" y="0" width="262" height="20" uuid="dcc9e05f-8be5-4de4-82e4-d12e7358c7a4"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="711" y="1" width="73" height="20" uuid="3ee5b8da-f910-4d24-9d6f-f6c68bfb78a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="1" width="111" height="20" uuid="0bf508c8-0481-4626-9019-837518b8f29d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{asunto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="127" y="21" width="100" height="20" uuid="1a919622-89dd-49bc-b52e-6f024057500b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="642" y="21" width="22" height="20" uuid="d1c5c952-f3fc-4ce3-a97c-a286c060cc8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="687" y="21" width="23" height="20" uuid="b9185c44-7cec-4deb-85ef-2d4634e44a70"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="664" y="21" width="23" height="20" uuid="d59c742d-018c-4736-a6b0-5877fa1201a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="21" width="100" height="20" uuid="8af93f21-4e9c-43e1-b4ad-0f66de40a849"/>
+				<text><![CDATA[Generado :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

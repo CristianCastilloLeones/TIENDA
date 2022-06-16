@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="32287598-b631-4519-8a73-355aeebfed0d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="NOMBRE" class="java.lang.String"/>
+	<parameter name="CEDULA" class="java.lang.String"/>
+	<parameter name="NUMERO" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT TOP (1)[DETALLE],[FECHA],[VALORTORRE] ,[VALORLUZ] ,[MES],[PAGADO],[IDEMPLEADO] ,[OBSERVACION] ,[IMPRESO],[NUMERORECIBO] FROM [BDAirnet].[dbo].[TBPAGOTORRE] WHERE 
+NUMERORECIBO =$P{NUMERO}]]>
+	</queryString>
+	<field name="DETALLE" class="java.lang.String"/>
+	<field name="FECHA" class="java.sql.Timestamp"/>
+	<field name="VALORTORRE" class="java.lang.Double"/>
+	<field name="VALORLUZ" class="java.lang.Double"/>
+	<field name="MES" class="java.lang.String"/>
+	<field name="PAGADO" class="java.lang.Boolean"/>
+	<field name="IDEMPLEADO" class="java.lang.Integer"/>
+	<field name="OBSERVACION" class="java.lang.String"/>
+	<field name="IMPRESO" class="java.lang.Boolean"/>
+	<field name="NUMERORECIBO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="251" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="2" width="555" height="249" uuid="59ebbadf-445b-4e48-8600-0c30c57fbb78"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="118" y="2" width="173" height="20" uuid="af3f0aa5-30ad-4a27-80ad-c909f0c484de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE PAGO ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="401" y="4" width="153" height="20" uuid="181e904e-b2db-4957-a23a-b91aceb5f377"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="40" width="100" height="20" uuid="d6462fdc-e871-4d88-8341-a9c109e26e37"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETALLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="12" y="62" width="533" height="99" uuid="0c9aadb1-4ccb-4473-b427-072f231b2cfe"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA[$F{DETALLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="161" width="100" height="20" uuid="b7bb633f-e18b-48b3-8958-2dc75cbd51f6"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="205" width="222" height="20" uuid="03edc9ee-9b42-42c9-b6b7-146b521dd9da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="225" width="222" height="20" uuid="6c615da1-a352-48b9-8466-5760b4d6c74a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{CEDULA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="155" y="205" width="222" height="1" uuid="d7bb946e-a9da-49e8-84d3-e2220147a11d"/>
+			</line>
+			<textField>
+				<reportElement x="291" y="2" width="100" height="20" uuid="997679c2-4883-40fc-9318-d5e204dd5b70"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUMERORECIBO}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="260">
+			<textField>
+				<reportElement x="156" y="233" width="222" height="20" uuid="800e9fb2-40d5-4194-a515-844bad77b2c5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{CEDULA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="48" width="100" height="20" uuid="e25f29c2-f538-4eb3-8cde-eec40e0e0d7e"/>
+				<text><![CDATA[DETALLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="213" width="222" height="20" uuid="fd96d0b3-f88b-4ba3-9e1f-c26035fdb0b4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="156" y="213" width="222" height="1" uuid="5ff0be36-66fd-428e-823f-6870c219472d"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="402" y="12" width="153" height="20" uuid="0af05e41-f546-4544-aecc-f98ff4630129"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="181" y="10" width="173" height="20" uuid="609f73a3-d073-46b1-92c5-f51c445d311e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE PAGO ]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="1" y="10" width="555" height="249" uuid="3451502c-3507-429a-aa1d-ec9fabea50df"/>
+			</rectangle>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" x="13" y="70" width="533" height="99" uuid="3228c71d-bf8c-416f-be63-8a0c005d17ca"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DETALLE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="169" width="100" height="20" uuid="0a641f0d-e938-48e2-ba52-621431e8dfab"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="233" width="222" height="20" uuid="ba7e66a9-4aa8-4c54-a166-686fa3a3fc97"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{CEDULA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="48" width="100" height="20" uuid="4e7fecda-f1fe-4f42-a81d-87c82459b6ed"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETALLE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="148" y="213" width="222" height="20" uuid="c67b456e-4e7c-47c2-bcf2-c3d251b2bb35"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="394" y="12" width="153" height="20" uuid="41e44b57-642c-408e-92ad-137e0feb1380"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="112" y="10" width="173" height="20" uuid="76aaac11-fd72-4693-810f-668dd5522a49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE PAGO ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="284" y="10" width="100" height="20" uuid="ed46d4a6-c7d7-454b-96c7-d3e02b4a9294"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NUMERORECIBO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

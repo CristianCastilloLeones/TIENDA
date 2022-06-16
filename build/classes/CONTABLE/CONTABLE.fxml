@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="1673.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTABLE.CONTABLEController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1667.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <Label layoutX="1375.0" layoutY="37.0" text="MODULO CONTABLE - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Rectangle height="30.0" layoutX="17.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0945e3" />
+                        <Stop color="#087917" offset="0.007662835249042145" />
+                        <Stop color="#eaeaea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="47.0" layoutY="13.0" text="Contable" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="18.0" layoutY="44.0" prefHeight="3.0" prefWidth="1289.0" />
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-contabilidad-48.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="20.0" layoutY="55.0" prefHeight="693.0" prefWidth="1637.0">
+         <children>
+            <TabPane layoutX="14.0" layoutY="14.0" prefHeight="667.0" prefWidth="1612.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="TabRegistroPago" text="Registrar Pago">
+                     <content>
+                        <AnchorPane fx:id="FACTUReRO" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab fx:id="TabIngresos" text="INGRESOS">
+                     <content>
+                        <AnchorPane fx:id="INGRESOS" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab fx:id="TabCajaChica" text="Caja Chica">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="CAJACHICA" layoutX="423.0" layoutY="11.0" prefHeight="620.0" prefWidth="645.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="TabEgresos" text="Egresos">
+                     <content>
+                        <AnchorPane fx:id="egresos" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                     </content>
+                  </Tab>
+                  <Tab text="Pago de Torres">
+                    <content>
+                      <AnchorPane fx:id="auxpagoTorres" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Recaudaciones ">
+                    <content>
+                      <AnchorPane fx:id="tabarchivobanco" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Cierre de Caja">
+                    <content>
+                      <AnchorPane fx:id="cierredecaja" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab fx:id="TabFacturacionEle" text="Facturacion Electronica  Configuracion">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="465.0" layoutY="33.0" prefHeight="583.0" prefWidth="637.0">
+                                 <children>
+                                    <TextField fx:id="SRIPRUEBAS" alignment="CENTER" disable="true" layoutX="14.0" layoutY="55.0" prefHeight="25.0" prefWidth="606.0" />
+                                    <TextField fx:id="SRIPRODUCCION" alignment="CENTER" disable="true" layoutX="14.0" layoutY="108.0" prefHeight="25.0" prefWidth="609.0" />
+                                    <Label layoutX="14.0" layoutY="38.0" text="SRI PRUEBAS" />
+                                    <Label layoutX="14.0" layoutY="91.0" text="SRI PRODUCCION" />
+                                    <DatePicker fx:id="ATSINICIOFECHA" layoutX="19.0" layoutY="281.0" />
+                                    <DatePicker fx:id="ATSVENTASFINFECHA" layoutX="204.0" layoutY="281.0" />
+                                    <Label layoutX="19.0" layoutY="254.0" text="ATS VENTAS" />
+                                    <Button fx:id="GENERAR" layoutX="403.0" layoutY="281.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="178.0" text="GENERAR" />
+                                    <Label layoutX="14.0" layoutY="147.0" text="Firma Electronica" />
+                                    <TextField fx:id="firmaelecrtronica" layoutX="14.0" layoutY="164.0" prefHeight="25.0" prefWidth="608.0" />
+                                    <PasswordField layoutX="19.0" layoutY="217.0" prefHeight="25.0" prefWidth="245.0" />
+                                    <Label layoutX="19.0" layoutY="200.0" text="Clave Firma Electronica" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="archFacturacionElectronica" text="Facturacion Electronica">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tablaFacturaionElectronica" layoutX="6.0" layoutY="55.0" prefHeight="552.0" prefWidth="1587.0" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TableColumn fx:id="numerofacelectronica" prefWidth="75.0" sortable="false" text="N°" />
+                                  <TableColumn fx:id="nuremobasefacturaelectronica" prefWidth="83.0" sortable="false" text="N° FACTURA" />
+                                    <TableColumn fx:id="clientebasefactura" prefWidth="67.0" sortable="false" text="CLIENTE" />
+                                    <TableColumn fx:id="valorfacturadoV" prefWidth="129.0" sortable="false" text="VALOR FACTURADO" />
+                                    <TableColumn fx:id="seriecaja" prefWidth="75.0" sortable="false" text="SERIE CAJA" />
+                                    <TableColumn fx:id="fechageneradaFactura" prefWidth="102.0" sortable="false" text="FECHA GENERADA" />
+                                    <TableColumn fx:id="estadoSRI" prefWidth="115.0" sortable="false" text="ESTADO" />
+                                    <TableColumn fx:id="IDFACTURA" prefWidth="75.0" text="IDFACTURA" visible="false" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <DatePicker fx:id="INICIOBUSQUEDAFACTURACION" layoutX="38.0" layoutY="24.0" prefHeight="25.0" prefWidth="208.0" promptText="INICIO" />
+                              <DatePicker fx:id="FECHAFINBUSQUEDA" layoutX="256.0" layoutY="24.0" prefHeight="25.0" prefWidth="200.0" promptText="FIN" />
+                              <Label layoutX="195.0" layoutY="6.0" text="RANGO DE BUSQUEDA" />
+                              <Label fx:id="valortotal" alignment="CENTER" layoutX="688.0" layoutY="22.0" prefHeight="23.0" prefWidth="226.0" text="0.00" textAlignment="CENTER" />
+                              <Label fx:id="totalitem" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="616.0" prefHeight="17.0" prefWidth="181.0" text="0" textAlignment="CENTER" />
+                              <Button fx:id="buscar" layoutX="469.0" layoutY="24.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="BUSCAR" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Clientes">
+                    <content>
+                      <AnchorPane fx:id="archClientes" minHeight="0.0" minWidth="0.0" prefHeight="646.0" prefWidth="1612.0" />
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,28 @@
+
+
+.root{
+    -fx-width: auto;
+    -fx-height: auto; 
+    -fx-width:90%;
+    -fx-max-width:1000px;
+    -fx-margin: 20px auto;
+    -fx-display: grid;
+    -fx-grid-gap:20px;
+    -fx-grid-template-columns: repeat(1,1fr);
+    -fx-grid-template-rows: repeat(2,auto);
+
+}
+.root .table-view{
+  
+}
+.TabPane.table-view{
+    -fx-width: auto;
+    -fx-height: auto; 
+    -fx-width:90%;
+    -fx-max-width:1000px;
+    -fx-margin: 20px auto;
+    -fx-display: grid;
+    -fx-grid-gap:20px;
+    -fx-grid-template-columns: repeat(1,1fr);
+    -fx-grid-template-rows: repeat(2,auto);
+}

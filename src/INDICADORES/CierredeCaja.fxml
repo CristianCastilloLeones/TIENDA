@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.CierredeCajaController">
+   <children>
+      <Label layoutX="20.0" layoutY="14.0" text="CIERRE DE CAJA" />
+      <Label layoutX="22.0" layoutY="115.0" text="1 ctv">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ctvcant1" layoutX="70.0" layoutY="113.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="ctvcant5" layoutX="71.0" layoutY="146.0" />
+      <Label layoutX="21.0" layoutY="147.0" text="5 ctvs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ctvcant10" layoutX="71.0" layoutY="179.0" />
+      <Label layoutX="21.0" layoutY="181.0" text="10 ctvs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan1" layoutX="397.0" layoutY="117.0" />
+      <Label layoutX="358.0" layoutY="121.0" text="1 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan5" layoutX="398.0" layoutY="151.0" />
+      <Label layoutX="358.0" layoutY="155.0" text="5 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ctvcant25" layoutX="71.0" layoutY="213.0" />
+      <Label layoutX="21.0" layoutY="214.0" text="25 ctvs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ctvcant50" layoutX="71.0" layoutY="247.0" />
+      <Label layoutX="21.0" layoutY="248.0" text="50 ctvs">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ctvcant1dolar" layoutX="71.0" layoutY="282.0" />
+      <Label layoutX="20.0" layoutY="284.0" text="1 Dolar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan10" layoutX="398.0" layoutY="185.0" />
+      <Label layoutX="354.0" layoutY="188.0" text="10 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan20" layoutX="399.0" layoutY="218.0" />
+      <Label layoutX="356.0" layoutY="221.0" text="20 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan50" layoutX="400.0" layoutY="251.0" />
+      <Label layoutX="354.0" layoutY="253.0" text="50 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="billetecan100" layoutX="400.0" layoutY="283.0" />
+      <Label layoutX="350.0" layoutY="285.0" text="100 $">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ctvtotal1" alignment="CENTER" layoutX="219.0" layoutY="113.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="ctvtotal5" alignment="CENTER" layoutX="220.0" layoutY="146.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal1" alignment="CENTER" layoutX="546.0" layoutY="117.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal5" alignment="CENTER" layoutX="546.0" layoutY="151.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal10" alignment="CENTER" layoutX="546.0" layoutY="185.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal20" alignment="CENTER" layoutX="549.0" layoutY="218.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal50" alignment="CENTER" layoutX="549.0" layoutY="251.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="billetetotal100" alignment="CENTER" layoutX="549.0" layoutY="283.0" prefHeight="25.0" prefWidth="101.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="ctvtotal10" alignment="CENTER" layoutX="220.0" layoutY="179.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="ctvtotal20" alignment="CENTER" layoutX="220.0" layoutY="213.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="ctvtotal50" alignment="CENTER" layoutX="220.0" layoutY="246.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Label fx:id="ctvtotal1dolar" alignment="CENTER" layoutX="220.0" layoutY="282.0" prefHeight="25.0" prefWidth="93.0" text="0" textAlignment="CENTER" textFill="#1432da" />
+      <Button layoutX="534.0" layoutY="553.0" mnemonicParsing="false" text="Cancelar" />
+      <Button fx:id="GuadarCierreCaja" layoutX="604.0" layoutY="553.0" mnemonicParsing="false" text="Guardar" />
+      <Button fx:id="ver_detalle" layoutX="22.0" layoutY="553.0" mnemonicParsing="false" text="Ver detalle Ingresos" />
+      <Label layoutX="20.0" layoutY="84.0" text="Valor" />
+      <Label layoutX="352.0" layoutY="84.0" text="Valor" />
+      <Label layoutX="132.0" layoutY="84.0" text="Cantidad" />
+      <Label layoutX="451.0" layoutY="84.0" text="Cantidad" />
+      <Label layoutX="585.0" layoutY="85.0" text="Total" />
+      <Separator layoutX="314.0" layoutY="113.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Label layoutX="19.0" layoutY="60.0" text="Monedas" />
+      <Label layoutX="327.0" layoutY="60.0" text="Billetes" />
+      <Label layoutX="20.0" layoutY="324.0" text="Total en Monedas:  " />
+      <Label layoutX="340.0" layoutY="324.0" text="Total en Billetes:" />
+      <Label fx:id="TotalMonedas" alignment="CENTER" layoutX="263.0" layoutY="324.0" text="0.0" textAlignment="CENTER" />
+      <Label fx:id="TotalBilletes" alignment="CENTER" layoutX="596.0" layoutY="324.0" text="0.0" />
+      <Label layoutX="20.0" layoutY="370.0" text="Total  Efectivo Receptado:" />
+      <Label fx:id="totalgeneral" layoutX="300.0" layoutY="363.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="receptoremisor" layoutX="157.0" layoutY="10.0" prefHeight="25.0" prefWidth="293.0" promptText="Seleccione el Cajero" />
+      <Label layoutX="115.0" layoutY="14.0" text=" de:" />
+      <Label layoutX="20.0" layoutY="405.0" text="Total en Cheques:" />
+      <TextField fx:id="cantche" layoutX="132.0" layoutY="401.0" prefHeight="25.0" prefWidth="86.0" />
+      <TextField fx:id="totaltalcheq" layoutX="232.0" layoutY="401.0" prefHeight="25.0" prefWidth="162.0" promptText="Ingrese el total en cheques" />
+      <Label layoutX="482.0" layoutY="14.0" text="Monto Inical" />
+      <Label fx:id="valorinicial" layoutX="598.0" layoutY="14.0" text="0.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechadecierre" layoutX="19.0" layoutY="35.0" prefHeight="25.0" prefWidth="286.0" promptText="Seleccione la fecha  de apertura" />
+      <Label layoutX="20.0" layoutY="437.0" text="Total Voucher" />
+      <TextField fx:id="totalcantvoucher" layoutX="133.0" layoutY="432.0" prefHeight="25.0" prefWidth="86.0" />
+      <TextField fx:id="valortotalvoucher" layoutX="232.0" layoutY="433.0" prefHeight="25.0" prefWidth="162.0" promptText="Ingrese el Total en Voucher" />
+   </children>
+</AnchorPane>

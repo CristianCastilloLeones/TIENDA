@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="649.0" prefWidth="950.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAJA.TorrespagoController">
+   <center>
+      <Pane prefHeight="510.0" prefWidth="653.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btoregistrarsalida" layoutX="605.0" layoutY="461.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="190.0" text="Registrar Salida de Dinero">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+            <Label layoutX="23.0" layoutY="14.0" text="Autorizado por:" />
+            <Label layoutX="23.0" layoutY="81.0" text="Solicitante" />
+            <Label layoutX="23.0" layoutY="141.0" text="Quien entrega:" />
+            <Label layoutX="24.0" layoutY="261.0" text="Detalle:" />
+            <TextField fx:id="autorizadopor" layoutX="23.0" layoutY="31.0" prefHeight="35.0" prefWidth="635.0" />
+            <TextField fx:id="solicitante" layoutX="23.0" layoutY="98.0" prefHeight="35.0" prefWidth="635.0" />
+            <TextField fx:id="quienentrega" layoutX="23.0" layoutY="160.0" prefHeight="35.0" prefWidth="635.0" />
+            <Label layoutX="23.0" layoutY="203.0" text="Motivo" />
+            <TextField fx:id="motivos" layoutX="22.0" layoutY="220.0" prefHeight="35.0" prefWidth="635.0" />
+            <TextField fx:id="cantidad" alignment="CENTER_RIGHT" layoutX="22.0" layoutY="425.0" prefHeight="35.0" prefWidth="99.0" promptText="0.00" />
+            <Label layoutX="22.0" layoutY="474.0" text="Total A pagar" />
+            <TextField fx:id="numerosalidad" disable="true" layoutX="696.0" layoutY="6.0" prefHeight="25.0" prefWidth="108.0" />
+            <Button fx:id="editar" layoutX="432.0" layoutY="461.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="165.0" text="Editar Registro" visible="false" />
+            <Button fx:id="buscar" layoutX="696.0" layoutY="41.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Buscar" visible="false" />
+            <CheckBox fx:id="Editar" layoutX="594.0" layoutY="10.0" mnemonicParsing="false" text="Editar Registro" />
+            <TextArea fx:id="detallemotivo" layoutX="23.0" layoutY="279.0" prefHeight="123.0" prefWidth="633.0" />
+            <TextField fx:id="LuZ" layoutX="169.0" layoutY="424.0" prefHeight="36.0" prefWidth="99.0" />
+            <TextField fx:id="totalaapagar" editable="false" layoutX="106.0" layoutY="462.0" prefHeight="43.0" prefWidth="149.0" />
+            <Label layoutX="22.0" layoutY="408.0" text="Arrendamiento" />
+            <Label layoutX="176.0" layoutY="408.0" text="Servicio de Electricidad" />
+            <DatePicker fx:id="mesacancelar" layoutX="207.0" layoutY="-12.0" prefHeight="25.0" prefWidth="204.0" promptText="Mes a Cancelar" />
+         </children>
+      </Pane>
+   </center>
+   <left>
+      <Pane prefHeight="510.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="510.0" prefWidth="71.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Pane prefHeight="73.0" prefWidth="950.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" text="Registro de pago de Torre/s">
+               <font>
+                  <Font name="Times New Roman" size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="14.0" layoutY="37.0" prefHeight="13.0" prefWidth="932.0" style="-fx-background-color: #4B0082;" />
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <Pane prefHeight="66.0" prefWidth="950.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

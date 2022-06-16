@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1568.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.HistorialdePagoTorresController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1560.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <Label layoutX="1347.0" layoutY="37.0" text="MODULO  TORRES - Software de Control ISP v 3.0" textFill="#948d8d" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="1347.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="37.0">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Rectangle height="30.0" layoutX="17.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#b6e8e7" />
+                        <Stop color="#eaeaea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="47.0" layoutY="13.0" text="Historial de Pago de Torres">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="18.0" layoutY="44.0" prefHeight="4.0" prefWidth="1320.0" />
+      <DatePicker fx:id="USQUEDAINICUIAL" layoutX="178.0" layoutY="57.0" />
+      <DatePicker fx:id="BUSQUEDAFINAL" layoutX="419.0" layoutY="57.0" />
+      <Button fx:id="NUEVO" layoutX="27.0" layoutY="57.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Nuevo Pago" />
+      <TableView fx:id="HISTORIALPAGOTORRE" layoutX="27.0" layoutY="108.0" prefHeight="531.0" prefWidth="1179.0">
+        <columns>
+          <TableColumn fx:id="NUMERORECIBO" prefWidth="131.0" text="N° de Recibo" />
+          <TableColumn fx:id="FECHA" minWidth="0.0" prefWidth="139.0" text="Fecha" />
+            <TableColumn fx:id="NOMBRE" prefWidth="301.0" text="Nombre" />
+            <TableColumn fx:id="VALORTOTAL" prefWidth="126.0" text="Valor Total" />
+            <TableColumn fx:id="EMPLEADOEMISOR" prefWidth="320.0" text="Empleado Emisor" />
+            <TableColumn fx:id="PAGADO" prefWidth="78.0" text="Pagado" />
+            <TableColumn fx:id="IMPRESO" prefWidth="76.0" text="Impreso" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

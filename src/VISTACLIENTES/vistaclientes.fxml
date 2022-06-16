@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="714.0" prefWidth="1151.0" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VISTACLIENTES.VistaclientesController">
+   <children>
+      <Pane layoutX="14.0" layoutY="20.0" prefHeight="490.0" prefWidth="857.0" style="-fx-border-color: #FF1493;" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <TextField fx:id="nombre" editable="false" layoutX="12.0" layoutY="54.0" prefHeight="25.0" prefWidth="338.0" />
+            <TextField fx:id="ci" editable="false" layoutX="366.0" layoutY="55.0" prefHeight="25.0" prefWidth="338.0" />
+            <Label layoutX="13.0" layoutY="34.0" text="Nombres y Apellidos" />
+            <Label layoutX="368.0" layoutY="37.0" text="RUC/C.I" />
+            <Button fx:id="modificar" layoutX="740.0" layoutY="572.0" mnemonicParsing="false" onAction="#activar" prefHeight="60.0" prefWidth="160.0" text="EDITAR">
+               <effect>
+                  <DropShadow color="#bc1010" />
+               </effect></Button>
+            <Button fx:id="guardar" disable="true" layoutX="915.0" layoutY="573.0" mnemonicParsing="false" onAction="#guardar" prefHeight="60.0" prefWidth="160.0" text="Guardar">
+               <effect>
+                  <DropShadow color="#09ba26" />
+               </effect></Button>
+            <Button fx:id="imprimircontrato" layoutX="951.0" layoutY="315.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Imprimir Contrato">
+               <effect>
+                  <DropShadow color="#bc7f15" />
+               </effect></Button>
+            <ComboBox fx:id="nombredecuent" layoutX="298.0" layoutY="5.0" prefHeight="25.0" prefWidth="261.0" promptText="Selecione la cuenta" visible="false" />
+            <Label fx:id="codigocontra" alignment="CENTER" layoutX="761.0" layoutY="9.0" prefHeight="17.0" prefWidth="76.0" textAlignment="CENTER" />
+            <Label fx:id="estadoservicio" layoutX="10.0" layoutY="650.0" prefHeight="25.0" prefWidth="1106.0" style="-fx-border-color: #000080;" text="ESTADO DE SERVICIO" textFill="#f5f5f5" />
+            <TextField fx:id="codigcontrato" disable="true" layoutX="142.0" layoutY="27.0" visible="false" />
+            <Button fx:id="historail" layoutX="951.0" layoutY="272.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="Ver Historial" />
+            <TabPane layoutX="11.0" layoutY="87.0" prefHeight="470.0" prefWidth="918.0" style="-fx-border-color: #000000;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Datos Personales">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="861.0">
+                           <children>
+                              <TextField fx:id="dire" disable="true" layoutX="14.0" layoutY="87.0" prefHeight="25.0" prefWidth="420.0" />
+                              <TextField fx:id="tele1" disable="true" layoutX="14.0" layoutY="142.0" prefHeight="25.0" prefWidth="203.0" />
+                              <TextField fx:id="tele2" disable="true" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="203.0" />
+                              <TextField fx:id="correo" disable="true" layoutX="16.0" layoutY="234.0" prefHeight="25.0" prefWidth="203.0" />
+                              <Label layoutX="14.0" layoutY="63.0" text="Direccion" />
+                              <CheckBox fx:id="editdireccion" layoutX="72.0" layoutY="63.0" mnemonicParsing="false" text="Editar Direccion" visible="false" />
+                              <Label layoutX="15.0" layoutY="124.0" text="Telefono 1" />
+                              <Label layoutX="15.0" layoutY="168.0" text="Telefono 2" />
+                              <Label layoutX="15.0" layoutY="214.0" text="Correo Electronico" />
+                              <TextField fx:id="latitud" disable="true" layoutX="279.0" layoutY="198.0" />
+                              <TextField fx:id="longi" disable="true" layoutX="279.0" layoutY="239.0" />
+                              <Label layoutX="280.0" layoutY="182.0" text="Latitud " />
+                              <Label layoutX="280.0" layoutY="222.0" text="Longitud" />
+                              <TextField fx:id="fechadeing" disable="true" layoutX="14.0" layoutY="281.0" />
+                              <Label layoutX="15.0" layoutY="264.0" text="Fecha de Ingreso" />
+                              <RadioButton fx:id="cambiodomicion" layoutX="681.0" layoutY="336.0" mnemonicParsing="false" text="Cambio de Domicilio" />
+                              <CheckBox fx:id="editelefono1" layoutX="72.0" layoutY="124.0" mnemonicParsing="false" text="Editar Telefono 1" visible="false" />
+                              <CheckBox fx:id="editelefo2" layoutX="74.0" layoutY="168.0" mnemonicParsing="false" text="Editar Telefono 2" visible="false" />
+                              <CheckBox fx:id="edemail" layoutX="119.0" layoutY="215.0" mnemonicParsing="false" text="Editar E-mail" visible="false" />
+                              <Label layoutX="681.0" layoutY="309.0" text="Cambio Permitodo">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font></Label>
+                              <RadioButton fx:id="CambioContrato" layoutX="681.0" layoutY="364.0" mnemonicParsing="false" text="Cambio de Contrato" />
+                              <CheckBox fx:id="EstadoCliente" layoutX="367.0" layoutY="12.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="134.0" text="Estado Activo">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font></CheckBox>
+                              <CheckBox fx:id="retiradoChech" layoutX="481.0" layoutY="34.0" mnemonicParsing="false" text="Retirado">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Datos del Plan">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="367.0" prefWidth="664.0">
+                           <children>
+                              <TextField fx:id="tipoins" disable="true" layoutX="16.0" layoutY="32.0" prefHeight="25.0" prefWidth="203.0" />
+                              <TextField fx:id="plan" disable="true" layoutX="15.0" layoutY="75.0" prefHeight="25.0" prefWidth="203.0" />
+                              <Label layoutX="17.0" layoutY="14.0" text="Tipo de Instalacion" />
+                              <Label layoutX="15.0" layoutY="57.0" text="PLAN CONTRATADO" />
+                              <TextField fx:id="comparti" disable="true" layoutX="14.0" layoutY="128.0" />
+                              <Label layoutX="16.0" layoutY="106.0" text="Comparticion" />
+                              <TextField fx:id="onuid" disable="true" layoutX="19.0" layoutY="179.0" />
+                              <TextField fx:id="serviport" disable="true" layoutX="20.0" layoutY="223.0" prefHeight="25.0" />
+                              <TextField fx:id="serial" disable="true" layoutX="20.0" layoutY="271.0" />
+                              <Label layoutX="20.0" layoutY="161.0" text="ONU ID" />
+                              <Label layoutX="20.0" layoutY="206.0" text="Puerto de Servicio" />
+                              <Label layoutX="21.0" layoutY="253.0" text="Serial" />
+                              <TextField fx:id="ip" disable="true" layoutX="277.0" layoutY="24.0" />
+                              <Label layoutX="277.0" layoutY="9.0" text="IP" />
+                              <Label fx:id="tikectsmodulo" alignment="CENTER" layoutX="348.0" layoutY="318.0" prefHeight="39.0" prefWidth="187.0" text="0001-FO" textAlignment="CENTER" visible="false" />
+                              <Label fx:id="titulotike" layoutX="353.0" layoutY="288.0" prefHeight="33.0" prefWidth="195.0" text="Tickets Activos" visible="false" />
+                              <TextField fx:id="cable" disable="true" layoutX="277.0" layoutY="73.0" />
+                              <Label layoutX="279.0" layoutY="53.0" text="Mts de Cable" />
+                              <Button fx:id="corte" layoutX="647.0" layoutY="279.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Corte/Activacion de servicio" />
+                              <Button fx:id="realizarcambio" disable="true" layoutX="647.0" layoutY="321.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="150.0" text="Guardar Ont">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                              <RadioButton fx:id="cambioont" layoutX="647.0" layoutY="78.0" mnemonicParsing="false" text="Cambio de ONT" />
+                              <RadioButton fx:id="cabiodeplan" layoutX="648.0" layoutY="99.0" mnemonicParsing="false" text="Cambio de Plan" />
+                              <RadioButton fx:id="migracionradio" layoutX="647.0" layoutY="56.0" mnemonicParsing="false" text="Migracion" />
+                              <CheckBox fx:id="edip" layoutX="294.0" layoutY="6.0" mnemonicParsing="false" text="Editar IP" visible="false" />
+                              <CheckBox fx:id="EONUID" layoutX="68.0" layoutY="161.0" mnemonicParsing="false" text="Editar ONU ID" visible="false" />
+                              <CheckBox fx:id="EdSP" layoutX="126.0" layoutY="206.0" mnemonicParsing="false" text="Editar SP" visible="false" />
+                              <CheckBox fx:id="Eserial" layoutX="74.0" layoutY="253.0" mnemonicParsing="false" text="Editar Serial" visible="false" />
+                              <Label layoutX="647.0" layoutY="39.0" text="Que Ediccion desea Realizar">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Hyperlink fx:id="iraip" layoutX="429.0" layoutY="25.0" text="IR A NAVEGADOR" underline="true" />
+                              <Label layoutX="280.0" layoutY="108.0" text="PON" />
+                              <TextField fx:id="OLTPON" editable="false" layoutX="277.0" layoutY="128.0" />
+                              <Label layoutX="280.0" layoutY="161.0" text="TARJETA" />
+                              <Label layoutX="280.0" layoutY="206.0" text="OLT" />
+                              <TextField fx:id="OLTTARJETA" editable="false" layoutX="279.0" layoutY="179.0" />
+                              <TextField fx:id="nodoprincipal" editable="false" layoutX="279.0" layoutY="223.0" />
+                              <CheckBox fx:id="EPON" layoutX="442.0" layoutY="132.0" mnemonicParsing="false" text="Editado PON" />
+                              <CheckBox fx:id="ETAR" layoutX="445.0" layoutY="183.0" mnemonicParsing="false" text="Editado TAR" />
+                              <CheckBox fx:id="EOLT" layoutX="445.0" layoutY="227.0" mnemonicParsing="false" text="Editado OLT" />
+                              <TextField fx:id="datoslinea" layoutX="19.0" layoutY="384.0" prefHeight="25.0" prefWidth="321.0" promptText="service-port 1936 vlan 26 gpon 0/7/11 ont 7" />
+                              <Label layoutX="22.0" layoutY="367.0" text="INGRESE LA LINES DE COMANDOS" />
+                              <Button fx:id="Guardar_Datos_olt" layoutX="349.0" layoutY="384.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" text="Guardar Datos" />
+                              <Button fx:id="btnguardarOlt" layoutX="279.0" layoutY="258.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Guarda OLT" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Facturacion">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="valorinst" disable="true" layoutX="14.0" layoutY="31.0" prefHeight="25.0" />
+                              <TextField fx:id="valormens" disable="true" layoutX="14.0" layoutY="99.0" />
+                              <Label layoutX="16.0" layoutY="14.0" text="Valor de Instalacion" />
+                              <Label layoutX="16.0" layoutY="80.0" text="Valor Mensual" />
+                              <TextField fx:id="ultimopago" disable="true" layoutX="391.0" layoutY="27.0" />
+                              <Label layoutX="392.0" layoutY="10.0" text="Ultimo Pago N° Fact." />
+                              <Button fx:id="nuevoitem" layoutX="645.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Generar Factura">
+                                 <effect>
+                                    <DropShadow color="#0f8bd6" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="receptarpago" layoutX="465.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="VER RIDE">
+                                 <effect>
+                                    <DropShadow color="#274cc6" />
+                                 </effect>
+                              </Button>
+                              <CheckBox fx:id="edmensual" layoutX="98.0" layoutY="80.0" mnemonicParsing="false" text="Editar Mensual" visible="false" />
+                              <Button fx:id="promedadepago" layoutX="298.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Promesa de Pago">
+                                 <effect>
+                                    <DropShadow color="#611e6b" />
+                                 </effect>
+                              </Button>
+                              <Button fx:id="ReceptarDinero" layoutX="98.0" layoutY="324.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Recepcion de Dinero" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <Label layoutX="13.0" layoutY="585.0" text="ACTIVO" />
+            <Label layoutX="13.0" layoutY="603.0" text="IP PUBLICA" />
+            <Label layoutX="13.0" layoutY="624.0" text="SERVICIO NO ENCONTRADO" />
+            <Label layoutX="170.0" layoutY="585.0" prefHeight="17.0" prefWidth="28.0" style="-fx-background-color: DARKGREEN;" />
+            <Label layoutX="170.0" layoutY="604.0" prefHeight="17.0" prefWidth="28.0" style="-fx-background-color: DARKBLUE;" />
+            <Label layoutX="170.0" layoutY="624.0" prefHeight="17.0" prefWidth="28.0" style="-fx-background-color: DARKSLATEGREY;" />
+            <Label layoutX="13.0" layoutY="565.0" text="CORTE" />
+            <Label layoutX="170.0" layoutY="566.0" prefWidth="28.0" style="-fx-background-color: DARKRED;" textFill="#8a040dfa" />
+         </children>
+         <effect>
+            <DropShadow color="#cdacac9c" height="43.24" radius="20.75" spread="0.36" width="41.76" />
+         </effect>
+      </Pane>
+      <Label layoutX="27.0" layoutY="15.0" text="Datos del Cliente ">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

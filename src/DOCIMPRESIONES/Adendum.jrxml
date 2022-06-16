@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ca4b59ce-b20f-4b35-b361-9d08f4824467">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="262"/>
+	<parameter name="CONTRATO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT top (1)* FROM [BDAirnet].[dbo].[VISTACLIENTENUEVOPROG]where CODIGOCONTRATO =$P{CONTRATO}]]>
+	</queryString>
+	<field name="IDCLIENTE" class="java.lang.Integer"/>
+	<field name="lon" class="java.lang.String"/>
+	<field name="lat" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="ponmac" class="java.lang.String"/>
+	<field name="fechainstalacion" class="java.lang.String"/>
+	<field name="ipv4" class="java.lang.String"/>
+	<field name="detalle" class="java.lang.String"/>
+	<field name="nodoprincipal" class="java.lang.String"/>
+	<field name="normal" class="java.lang.String"/>
+	<field name="diapago" class="java.lang.String"/>
+	<field name="diacorte" class="java.lang.String"/>
+	<field name="plancontratado" class="java.lang.String"/>
+	<field name="crearfactura" class="java.lang.String"/>
+	<field name="TARJETA" class="java.lang.Boolean"/>
+	<field name="CHEQUE" class="java.lang.Boolean"/>
+	<field name="EFECTIVO" class="java.lang.Boolean"/>
+	<field name="DISCAPACIDAD" class="java.lang.Boolean"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="ESTADO" class="java.lang.Boolean"/>
+	<field name="CELULAR2" class="java.lang.String"/>
+	<field name="CELULAR1" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="NOMBRES" class="java.lang.String"/>
+	<field name="APELLIDOS" class="java.lang.String"/>
+	<field name="IDENTIFICACION" class="java.lang.String"/>
+	<field name="CODIGOCLIENTE" class="java.lang.String"/>
+	<field name="CODIGOCONTRATO" class="java.lang.String"/>
+	<field name="VALORMENSUAL" class="java.lang.Double"/>
+	<field name="VALORINTALACION" class="java.lang.Double"/>
+	<field name="TIPOINSTALACION" class="java.lang.String"/>
+	<field name="FECHAINGRESO" class="java.sql.Timestamp"/>
+	<field name="FECHAFIN" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="10" width="476" height="33" uuid="ee90555d-1dd0-449c-90ba-5939a9a2a202"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADENDUM AL CONTRATO DE PRESTACIÓN DE SERVICIOS DE VALOR AGREGADO DE ACCESO A INTERNET Nº. ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="398" y="29" width="83" height="11" uuid="cd97ce66-2e62-43ff-bf04-56b7171a8c68"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGOCONTRATO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="589" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="8" width="515" height="496" uuid="8f9968d1-fcc9-434f-bb3f-b33b15382e0b"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Con fecha ....................................., entre EL PROVEEDOR y EL CLIENTE, se suscribió el Contrato de Prestación de Servicios de Valor Agregado de Acceso a Internet Nº ................... autorizado mediante Resolución No. 355-08-CONATEL-2011 expedida el 28 de Abril del 2011, y del Permiso para la Prestación de Servicios de Valor Agregado de fecha 29 de Junio de 2011, inscrito en el Tomo 93a fojas 9305 del Registro Público de Telecomunicaciones, mediante el cual, EL PROVEEDOR proporcionaría a EL CLIENTE la prestación de servicios de valor agregado de acceso a internet, por lo que, las partes de común acuerdo amparados en la cláusula SEGUNDA del contrato principal, convienen celebrar el presente ADENDUM que formará parte integrante del contrato, dentro de las siguientes especificaciones:
+
+PRIMERA.- A fin de poner en operación el servicio de acceso a internet, EL PROVEEDOR realiza la instalación en el domicilio, oficina o local comercial del CLIENTE, los equipos con las siguientes características: ( ......................... ), sobre los cuales, mantiene la reserva del dominio, en virtud de que, el costo por instalación pagado por EL CLIENTE y que se detalla en el ANEXO No. 2 del Contrato principal, no es por la adquisición y venta de los equipos, sino exclusivamente por los gastos técnicos y operativos de la instalación del servicio, de tal manera que, una vez que se haya terminado el contrato de prestación de servicios de acceso a internet por cualquiera de las circunstancias determinadas en la cláusula OCTAVA del contrato, EL CLIENTE se encuentra en la obligación legal y moral de la devolución inmediata de los equipos  <@( .......................... )> , que le fueron instalados al momento de la contratación del servicio, caso contrario, EL CLIENTE deberá asumir los costos y EL PROVEEDOR procederá a la facturación para el cobro del valor de los equipos, que se encuentren especificados en el mercado comercial.
+
+SEGUNDA.- Al momento de la suscripción del presente ADENDUM, EL CLIENTE da su consentimiento y autorización para la suscripción de un PAGARÉ  No. ......................, girado incondicionalmente a nombre del PROVEEDOR, por el monto de CUATROCIENTOS DÓLARES ($400), como garantía por los equipos instalados por parte del PROVEEDOR y de los meses de servicios vencidos e impagos por el CLIENTE, de tal manera, que el PAGARÉ podrá ser presentado al cobro exclusivamente al momento de la terminación del contrato de servicios, y, el CLIENTE renuncia a presentar excepciones o impugnaciones y se compromete a ejecutar el pago de los valores adeudados y de los equipos dañados o no devueltos al PROVEEDOR.
+
+TERCERA.- En el contrato principal, específicamente en la Cláusula DUODÉCIMA, se refiere a las controversias que se suscitaren entre las partes por motivo del contrato, se ventilarán de acuerdo al ordenamiento jurídico vigente, sin determinar con precisión el procedimiento a seguirse, razón por la cual, mediante este ADENDUM, las partes PROVEEDOR Y EL CLIENTE, consienten renunciar a su domicilio natural, y, se someten a los jueces de la jurisdicción del cantón QUEVEDO, o, de los jueces del lugar de la celebración del Contrato, en mérito de lo establecido en el Art.55 del Código Civil, así como, aceptan someterse a la vía ejecutiva. 
+
+Para constancia de lo anterior, las partes firman en tres ejemplares del mismo tenor, en la ciudad de Quevedo, el  .............................................. .]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="80" y="8" width="100" height="11" uuid="f2832052-2244-4693-96ed-66109c2b8c1a"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="20" y="460" width="148" height="20" uuid="bba4287d-b280-4650-805e-22a0b6c06f15"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="23" width="83" height="11" uuid="ac4e7c7f-03c7-4e58-9a9e-0d4af739c297"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGOCONTRATO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="274" width="83" height="11" uuid="4d1a7403-7027-4800-a905-1eaa89509b7b"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CODIGOCONTRATO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="461" y="135" width="70" height="11" uuid="26e8d715-096d-4a72-9307-fd8b0d364265"/>
+				<textElement textAlignment="Center">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ponmac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="211" width="73" height="11" uuid="ae459653-6232-4106-9978-8a8e99f82d3b"/>
+				<textElement textAlignment="Justified">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ponmac}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="50" y="555" width="165" height="1" uuid="e899cd98-4795-429e-8363-de707f98ce66"/>
+			</line>
+			<line>
+				<reportElement x="296" y="554" width="165" height="1" uuid="3c13d728-7308-4388-bdc6-f9e918aefa5f"/>
+			</line>
+			<staticText>
+				<reportElement x="89" y="556" width="91" height="11" uuid="4444ad3f-ed72-4804-9c05-fb913a4caff1"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Galo Alfredo Alava Macas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="566" width="74" height="11" uuid="06e0d8d8-325c-4fd0-9e58-f743e4030dea"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC: 1204112724001]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="299" y="557" width="67" height="11" uuid="53b6b950-24a7-40b0-8b3b-b5d29c35946a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="568" width="73" height="11" uuid="8eff2eb4-1255-4096-b2a4-506cb7979ce3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDENTIFICACION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="307" y="568" width="33" height="11" uuid="4a15e6e7-32cc-447f-ab47-3fb4812fdca8"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC/C.I]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="369" y="557" width="111" height="11" uuid="d24e51a8-7aab-4907-a0b8-1c0d90d1ed38"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

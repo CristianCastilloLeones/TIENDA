@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SOPORTE.VERTICKETController">
+   <children>
+      <Pane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="896.0" style="-fx-background-color: #eaeaea;" stylesheets="@EstilosGenerales.css">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="63.0" prefWidth="763.0">
+               <children>
+                  <Label fx:id="cdt" layoutX="441.0" layoutY="14.0" text="ST00126" />
+                  <Separator layoutX="37.0" layoutY="37.0" prefHeight="0.0" prefWidth="655.0" />
+                  <ImageView fitHeight="23.0" fitWidth="375.0" layoutX="66.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/barsgreen.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="37.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/icons8-sin-red-48.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="76.0" layoutY="14.0" text="Ver Ticket" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="37.0" layoutY="39.0" prefHeight="33.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="3.0" layoutY="10.0" text="Detalles" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="numero" layoutX="600.0" layoutY="14.0" prefHeight="17.0" prefWidth="95.0" text="0000" />
+               </children>
+            </AnchorPane>
+            <TabPane layoutX="29.0" layoutY="83.0" prefHeight="264.0" prefWidth="517.0" tabClosingPolicy="UNAVAILABLE" />
+            <Pane layoutX="32.0" layoutY="91.0" prefHeight="403.0" prefWidth="492.0" style="-fx-background-color: #f0ffff;">
+               <children>
+                  <Label fx:id="cliente" layoutX="25.0" layoutY="17.0" text="Cliente : Juan Pepito">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="detalle" layoutX="25.0" layoutY="43.0" text="El internet no me carga en una telefono " />
+               </children>
+            </Pane>
+            <AnchorPane layoutX="546.0" layoutY="91.0" prefHeight="216.0" prefWidth="323.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="1.0" prefHeight="26.0" prefWidth="116.0" text="Adjunto" />
+                  <ImageView fx:id="foto" fitHeight="150.0" fitWidth="286.0" layoutX="24.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="imprimir" alignment="CENTER_RIGHT" layoutX="29.0" layoutY="505.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" text="Imprimir " textAlignment="RIGHT" />
+            <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="40.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-imprimir-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

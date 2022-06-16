@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="968.0" stylesheets="@../../../../../Desktop/EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VISTACLIENTES.ReceptorEfectivoController">
+   <children>
+      <Pane layoutX="13.0" layoutY="12.0" prefHeight="520.0" prefWidth="940.0" style="-fx-border-color: #663399;" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label layoutX="28.0" layoutY="34.0" text="Nº RECIBO " />
+            <Label layoutX="28.0" layoutY="62.0" text="Cliente" />
+            <Label layoutX="512.0" layoutY="30.0" text="Fecha Recepcion" />
+            <TextField fx:id="numerofact" disable="true" layoutX="96.0" layoutY="30.0" prefHeight="25.0" prefWidth="324.0" />
+            <TextField fx:id="nombrecliente" disable="true" layoutX="96.0" layoutY="56.0" prefHeight="25.0" prefWidth="324.0" />
+            <TextField fx:id="fechagenera" disable="true" layoutX="610.0" layoutY="30.0" prefHeight="25.0" prefWidth="324.0" />
+            <TextField fx:id="total" layoutX="142.0" layoutY="387.0" prefHeight="54.0" prefWidth="233.0" />
+            <Label layoutX="193.0" layoutY="356.0" text="TOTAL RECEPTADO" underline="true" />
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="21.0" prefWidth="163.0" text="Recepcion de Efectivo">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="26.0" layoutY="113.0" prefHeight="0.0" prefWidth="906.0" />
+            <TableView fx:id="tabladetalle" layoutX="26.0" layoutY="120.0" prefHeight="203.0" prefWidth="906.0">
+              <columns>
+                <TableColumn fx:id="canti" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" text="Cantidad" />
+                <TableColumn fx:id="detalle" editable="false" maxWidth="547.0" minWidth="400.0" prefWidth="543.0" text="Detalle" />
+                  <TableColumn fx:id="pvp" editable="false" maxWidth="181.0" minWidth="100.0" prefWidth="110.0" text="Precio Unitario" />
+                  <TableColumn fx:id="pvpt" editable="false" maxWidth="170.0" minWidth="19.0" prefWidth="170.0" text="Precio Total" />
+                  <TableColumn fx:id="idval" prefWidth="75.0" visible="false" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="20.0" layoutY="470.0" />
+            <Label layoutX="29.0" layoutY="85.0" text="C.I/RUC" />
+            <TextField fx:id="cedulatext" disable="true" layoutX="96.0" layoutY="83.0" prefHeight="25.0" prefWidth="324.0" />
+            <Button fx:id="AUTORIZARYENVIAR" layoutX="782.0" layoutY="452.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="149.0" text="IMPRIMIR RECIBO" />
+            <Label fx:id="clavaccessri" alignment="CENTER" layoutX="510.0" layoutY="8.0" prefHeight="17.0" prefWidth="427.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="655.0" layoutY="356.0" text="TOTAL SELECIONADO" />
+            <Label fx:id="totalselescionado" alignment="CENTER" contentDisplay="CENTER" layoutX="783.0" layoutY="332.0" prefHeight="54.0" prefWidth="149.0" text="0.00" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

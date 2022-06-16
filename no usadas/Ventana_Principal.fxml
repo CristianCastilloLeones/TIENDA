@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" style="-fx-background-color: eaeaea; -fx-background-size: stretch;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.Ventana_PrincipalController">
+   <children>
+      <Label layoutX="24.0" layoutY="986.0" prefHeight="36.0" prefWidth="152.0" text="Desarrollado por Airfiber S.A 2020." textFill="#615e5e" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="1744.0" AnchorPane.topAnchor="986.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="151.0" prefWidth="216.0" style="-fx-background-color: eaeaea;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="168.0" layoutX="29.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="21.0">
+               <image>
+                  <Image url="@../imagenes/logo-aircontrol-nuevo.png" />
+               </image></ImageView>
+            <Label layoutX="78.0" layoutY="107.0" text="Software de Control ISP v 1.0" textFill="#c6c6c6" AnchorPane.leftAnchor="78.0" AnchorPane.topAnchor="107.0">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane cache="true" layoutX="214.0" prefHeight="200.0" prefWidth="1704.0" style="-fx-background-image: #eaeaea;" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="actualizarlistacliente" layoutX="854.0" layoutY="108.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" AnchorPane.bottomAnchor="56.0" AnchorPane.rightAnchor="814.0" AnchorPane.topAnchor="108.0" />
+            <TextField fx:id="cliente3" layoutX="920.0" layoutY="114.0" prefHeight="25.0" prefWidth="604.0" promptText="Ingrese el nombre del cliente o IP a buscar" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="114.0" />
+            <Separator layoutX="430.0" layoutY="75.0" prefHeight="3.0" prefWidth="874.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="75.0" />
+            <ImageView fx:id="botonactualizar" fitHeight="27.0" fitWidth="33.0" layoutX="858.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="819.0" AnchorPane.topAnchor="113.0">
+               <image>
+                  <Image url="@../imagenes/icons8-sincronizar-48.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="BuscarCliente" layoutX="1554.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Buscar" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="114.0" />
+            <ImageView fitHeight="52.0" fitWidth="80.0" layoutX="1589.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="14.0">
+               <image>
+                  <Image url="@../imagenes/logo-aircontrol-nuevo.png" />
+               </image>
+            </ImageView>
+                  <Pane layoutX="1015.0" layoutY="20.0" prefHeight="39.0" prefWidth="316.0" AnchorPane.rightAnchor="373.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label fx:id="usuario" layoutX="6.0" layoutY="4.0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                  <Label fx:id="usuario" layoutX="4.0" layoutY="12.0" prefHeight="17.0" prefWidth="306.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                     </children>
+                  </Pane>
+            <Label layoutX="954.0" layoutY="30.0" text="Hola," AnchorPane.rightAnchor="714.0" AnchorPane.topAnchor="30.0">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="185.0" prefHeight="3.0" prefWidth="1673.0" />
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="1347.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="330.0" AnchorPane.topAnchor="31.0">
+               <image>
+                  <Image url="@../imagenes/icons8-notification-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="1395.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="282.0" AnchorPane.topAnchor="31.0">
+               <image>
+                  <Image url="@../imagenes/icons8-chat-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="cargandoImagen" fitHeight="101.0" fitWidth="98.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/gif-cargando-sin-fondo-3.gif" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <TabPane fx:id="tabPane" layoutX="223.0" layoutY="195.0">
+         <tabs>
+            <Tab>
+               <content>
+                  
+                    
+                        <AnchorPane fx:id="content" blendMode="DARKEN" layoutX="223.0" layoutY="195.0" prefHeight="783.0" prefWidth="1685.0" style="-fx-background-position: center center;" AnchorPane.bottomAnchor="58.0" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="195.0">
+                     <children>
+                        <Pane layoutX="5.0" layoutY="6.0" prefHeight="769.0" prefWidth="1673.0" style="-fx-background-color: #d3d3d3;" stylesheets="@ArchivoReponsive.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="6.0">
+                           <children>
+                              <ImageView fitHeight="567.0" fitWidth="683.0" layoutX="522.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/LOGOS-EN-GRIS.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                        </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+         
+      
+      <AnchorPane layoutX="7.0" layoutY="150.0" prefHeight="832.0" prefWidth="210.0" style="-fx-background-color: eaeaea;" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="1704.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <Separator layoutX="14.0" layoutY="35.0" prefHeight="3.0" prefWidth="186.0" />
+            <Button fx:id="inico" layoutX="14.0" layoutY="51.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Inicio" />
+            <Button fx:id="clientes" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Clientes" />
+            <Button fx:id="planesyservicios" layoutX="14.0" layoutY="187.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Productos" />
+            <Button fx:id="serviciotecnico" layoutX="14.0" layoutY="255.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Soporte" />
+            <Button fx:id="caja" layoutX="14.0" layoutY="323.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Caja" />
+            <Button fx:id="bodega" layoutX="14.0" layoutY="391.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Logistica" />
+            <Button fx:id="reportes" layoutX="13.0" layoutY="459.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Indicadores" />
+            <Button fx:id="gestionderedes" layoutX="12.0" layoutY="527.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Gestión" />
+            <Button fx:id="contabilidad" layoutX="12.0" layoutY="596.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Contable" />
+            <Button fx:id="ajustes" layoutX="12.0" layoutY="664.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="186.0" text="Ajustes" />
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="31.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-página-principal-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="31.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-connected-people-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="31.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-estrella-relleno-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="31.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-sin-red-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="31.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-vieja-caja-registradora-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="31.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-mover-por-carretilla-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="31.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-eye-checked-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="31.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-tecnología-blockchain-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="31.0" layoutY="614.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-contabilidad-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="31.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-engranaje-48.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children></AnchorPane>
+      <Separator layoutX="215.0" layoutY="201.0" orientation="VERTICAL" prefHeight="775.0" prefWidth="2.0" />
+   </children>
+</AnchorPane>

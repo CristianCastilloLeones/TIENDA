@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/Andres/Documents/NetBeansProjects/JavaFXApplication4/SRI.wsdl" uri="xml-resources/web-service-references/SRI/wsdl/SRI.wsdl"/>
+    <system systemId="https://celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl" uri="wsdl/celcer.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline.wsdl"/>
+    <system systemId="https://cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline?wsdl" uri="wsdl/cel.sri.gob.ec/comprobantes-electronicos-ws/RecepcionComprobantesOffline.wsdl"/>
+</catalog>

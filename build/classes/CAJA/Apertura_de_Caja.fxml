@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAJA.Apertura_de_CajaController">
+   <children>
+      <Button fx:id="guardar" layoutX="509.0" layoutY="354.0" mnemonicParsing="false" text="Guardar" />
+      <Button fx:id="cancelar" layoutX="434.0" layoutY="354.0" mnemonicParsing="false" text="Cancelar" />
+      <DatePicker fx:id="fechadeapertura" layoutX="35.0" layoutY="194.0" prefHeight="36.0" prefWidth="344.0" promptText="Seleccione la fecha de Apertura" />
+      <ComboBox fx:id="cajeros" layoutX="35.0" layoutY="120.0" prefHeight="36.0" prefWidth="344.0" promptText="Seleccione el Cajero de apertura" />
+      <TextField fx:id="valordeapertura" layoutX="35.0" layoutY="267.0" prefHeight="36.0" prefWidth="344.0" promptText="Dijite el valor Inicial" />
+      <Label layoutX="35.0" layoutY="97.0" text="Cajero de asignacion" />
+      <Label layoutX="35.0" layoutY="174.0" text="Fecha de Apertura" />
+      <Label layoutX="35.0" layoutY="246.0" text="Valor de Apertura" />
+      <Label layoutX="35.0" layoutY="14.0" text="Apertura de Caja">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="31.0" prefHeight="17.0" prefWidth="547.0" text="-----------------------------------------------------------------------------------------------------------------" textFill="#c30577" />
+   </children>
+</AnchorPane>

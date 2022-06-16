@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="1208.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAJA.Listado_Clientes_GeneralController">
+   <children>
+      <TableView fx:id="TablaClientes" layoutX="8.0" layoutY="91.0" prefHeight="445.0" prefWidth="1192.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="91.0">
+        <columns>
+          <TableColumn fx:id="IDCLIENTE" prefWidth="78.0" text="IDCLIENTE" />
+          <TableColumn fx:id="CLIENTES" prefWidth="190.0" text="CLIENTE" />
+            <TableColumn fx:id="IDENTIFICACION" prefWidth="75.0" text="IDENTIFICACION" />
+            <TableColumn fx:id="PLAN_CONTRATADO" prefWidth="75.0" text="PLAN_CONTRATADO" />
+            <TableColumn fx:id="VALOR_MENSUAL" prefWidth="75.0" text="VALOR_MENSUAL" />
+            <TableColumn fx:id="IP" prefWidth="75.0" text="IP" />
+            <TableColumn fx:id="ESTADO_SERVICIO" prefWidth="75.0" text="ESTADO_SERVICIO" />
+            <TableColumn fx:id="ESTADO_CLIENTES" prefWidth="75.0" text="ESTADO_CLIENTES" />
+            <TableColumn fx:id="ESTADOFACTURADO" prefWidth="75.0" text="FACTURADO" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <RadioButton fx:id="NOFACTU" layoutX="1067.0" layoutY="15.0" mnemonicParsing="false" text="NO FACTURADOS" />
+      <RadioButton fx:id="FACURADOS" layoutX="899.0" layoutY="15.0" mnemonicParsing="false" text="FACTURADOS" />
+      <TextField fx:id="TXTCLIENTES" layoutX="14.0" layoutY="9.0" prefHeight="40.0" prefWidth="333.0" promptText="NOMBRES /  IP / IDENTIFICACION / SERIAL " />
+      <Label layoutX="360.0" layoutY="16.0" prefHeight="25.0" prefWidth="104.0" text="N° de Resultados" />
+      <Label fx:id="NUMEORRESULTADOS" alignment="CENTER" layoutX="463.0" layoutY="24.0" prefHeight="17.0" prefWidth="137.0" text="0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="BUSCARCLIENTES" layoutX="557.0" layoutY="15.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="333.0" text="BUSCAR" />
+      <ChoiceBox fx:id="MESES" layoutX="905.0" layoutY="37.0" prefHeight="25.0" prefWidth="278.0" />
+      <Button fx:id="FACTURAR" layoutX="14.0" layoutY="540.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="278.0" text="FACTURAR" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="14.0" />
+   </children>
+</AnchorPane>

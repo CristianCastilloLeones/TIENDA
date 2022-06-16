@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="628.0" prefWidth="1284.0" style="-fx-border-color: #eaeaea;" stylesheets="@Formatocondinalesdetablas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.VistaReportesController">
+   <children>
+      <AnchorPane layoutX="6.0" layoutY="4.0" prefHeight="859.0" prefWidth="1701.0" style="-fx-border-color: #eaeaea;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="3.0">
+         <children>
+            <TabPane layoutX="6.0" layoutY="3.0" prefHeight="779.0" prefWidth="1691.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0">
+              <tabs>
+                  <Tab text="Egresos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="589.0" prefWidth="1695.0">
+                           <children>
+                              <TextField fx:id="egresos" alignment="CENTER" disable="true" layoutX="1025.0" layoutY="489.0">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></TextField>
+                              <Label layoutX="46.0" layoutY="469.0" text="Valor Egresado">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="35.0" layoutY="9.0" text="Egresos">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="eventos" layoutX="11.0" layoutY="94.0" prefHeight="371.0" prefWidth="1194.0">
+                                <columns>
+                                    <TableColumn fx:id="FECHA" prefWidth="75.0" text="FECHA" />
+                                  <TableColumn fx:id="clienteeve" prefWidth="75.0" text="Solicitado por: " />
+                                  <TableColumn fx:id="causa" prefWidth="75.0" text="Causa" />
+                                    <TableColumn fx:id="estado" prefWidth="75.0" text="Valor" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <DatePicker fx:id="iniciodebusqueda" layoutX="31.0" layoutY="45.0" promptText="Selecione la fecha Inicial" />
+                              <DatePicker fx:id="finaldebusqueda" layoutX="213.0" layoutY="44.0" prefHeight="25.0" prefWidth="194.0" promptText="Seleccionar la fecha Terminal" />
+                              <Button fx:id="buscar" layoutX="571.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" style="-fx-border-color: #00008B;" text="Realizar Busqueda" />
+                              <Label layoutX="36.0" layoutY="31.0" text="Busqueda por Fecha">
+                                 <font>
+                                    <Font name="System Bold Italic" size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="Bcausa" layoutX="476.0" layoutY="63.0" prefHeight="25.0" prefWidth="359.0" promptText="Busqueda por causa" />
+                              <TextField fx:id="Tsolicitante" layoutX="476.0" layoutY="35.0" prefHeight="25.0" prefWidth="359.0" promptText="Busqueda por solicitante" />
+                              <Button fx:id="SalidaDinero" layoutX="921.0" layoutY="7.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Salida de Dinero" />
+                              <Button fx:id="PagoTorres" layoutX="921.0" layoutY="35.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Pago de Torres" />
+                              <Button fx:id="Promesdepago" layoutX="921.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="Promesa de Pago" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

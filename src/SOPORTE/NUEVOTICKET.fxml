@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="900.0" style="-fx-background-color: eaeaea;" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SOPORTE.NUEVOTICKETController">
+   <children>
+      <AnchorPane prefHeight="44.0" prefWidth="900.0" style="-fx-background-color: eaeaea;">
+         <children>
+            <Label layoutX="59.0" layoutY="11.0" text="::: Ingreso de Ticket de Servicio :::">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="TIPO" alignment="CENTER" contentDisplay="CENTER" layoutX="455.0" layoutY="9.0" prefHeight="26.0" prefWidth="303.0" text="TIPO" />
+            <ComboBox fx:id="idcliente" layoutX="290.0" layoutY="11.0" prefHeight="25.0" prefWidth="165.0" promptText="Seleccione  ID Cliente" visible="false" />
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="24.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-sin-red-48.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="44.0" prefHeight="506.0" prefWidth="868.0" style="-fx-background-color: eaeaea;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" text="Cliente" />
+            <Label layoutX="444.0" layoutY="14.0" text="Departamento" />
+            <Label layoutX="446.0" layoutY="61.0" text="Tecnico" />
+            <Label layoutX="18.0" layoutY="61.0" text="Asunto del Ticket" />
+            <TextField fx:id="asunto" layoutX="11.0" layoutY="82.0" prefHeight="26.0" prefWidth="402.0" />
+            <Label layoutX="14.0" layoutY="116.0" text="Nombre del Solicitante" />
+            <TextField fx:id="sol" layoutX="11.0" layoutY="135.0" prefHeight="26.0" prefWidth="402.0" />
+            <Label layoutX="588.0" layoutY="116.0" text="Fecha de Visita" />
+            <Label layoutX="446.0" layoutY="116.0" text="Agendado desde" />
+            <Button fx:id="arc" layoutX="33.0" layoutY="403.0" mnemonicParsing="false" text="Adjuntar archivo" />
+            <TextArea fx:id="detalles" layoutX="16.0" layoutY="273.0" prefHeight="79.0" prefWidth="804.0" promptText="Ingrese detalles adicionales o indicaciones" />
+            <Button fx:id="gua" layoutX="266.0" layoutY="447.0" mnemonicParsing="false" onAction="#Guardartodo" prefHeight="33.0" prefWidth="158.0" text="Guardar/Generar" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="271.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-comprobado-48.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="cliente1" layoutX="11.0" layoutY="32.0" prefHeight="26.0" prefWidth="402.0" />
+            <TextField fx:id="empleado" layoutX="444.0" layoutY="78.0" prefHeight="26.0" prefWidth="278.0" />
+            <ImageView fx:id="image" fitHeight="52.0" fitWidth="66.0" layoutX="140.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="DEPA" layoutX="17.0" layoutY="186.0" prefHeight="79.0" prefWidth="390.0" />
+            <DatePicker fx:id="fechainicio" layoutX="444.0" layoutY="135.0" prefHeight="26.0" prefWidth="137.0" />
+            <DatePicker fx:id="fechavisita" layoutX="588.0" layoutY="135.0" prefHeight="26.0" prefWidth="128.0" />
+            <TextField fx:id="departamento" layoutX="444.0" layoutY="32.0" prefHeight="26.0" prefWidth="278.0" />
+            <CheckBox fx:id="check" layoutX="15.0" layoutY="403.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="37.0" />
+            <Label fx:id="direccionvisita" layoutX="447.0" layoutY="214.0" prefHeight="25.0" prefWidth="390.0" />
+            <Label layoutX="14.0" layoutY="169.0" text="Direccion de Visita" />
+            <CheckBox fx:id="noasignar" layoutX="732.0" layoutY="78.0" mnemonicParsing="false" text="No Asignar" />
+            <Button fx:id="gua1" layoutX="434.0" layoutY="447.0" mnemonicParsing="false" onAction="#Guardartodo" prefHeight="33.0" prefWidth="137.0" text="Cancelar" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="447.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-cancelar-48.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="11.0" prefHeight="13.0" prefWidth="704.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

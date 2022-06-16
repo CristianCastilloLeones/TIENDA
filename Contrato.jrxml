@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f7d9cb38-e95d-4a8f-a012-a91d6ac2ac70">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="0" width="526" height="34" uuid="2c9b918f-f4ce-46e9-a62d-dfb0327e54c2"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ADENDUM AL CONTRATO DE PRESTACIÓN DE SERVICIOS DE VALOR AGREGADO DE ACCESO A INTERNET Nº. {1?numeroContrato}]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageFooter>
+		<band height="546" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="13" width="526" height="465" uuid="7fb51289-bbaa-45da-8d55-3ef46de27fbf"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Con fecha PONERFECHAACTUAL, entre EL PROVEEDOR y EL CLIENTE, se suscribió el Contrato de Prestación de Servicios de Valor Agregado de Acceso a Internet Nº {2?numeroContrato} autorizado mediante Resolución No. 355-08-CONATEL-2011 expedida el 28 de Abril del 2011, y del Permiso para la Prestación de Servicios de Valor Agregado de fecha 29 de Junio de 2011, inscrito en el Tomo 93a fojas 9305 del Registro Público de Telecomunicaciones, mediante el cual, EL PROVEEDOR proporcionaría a EL CLIENTE la prestación de servicios de valor agregado de acceso a internet, por lo que, las partes de común acuerdo amparados en la cláusula SEGUNDA del contrato principal, convienen celebrar el presente ADENDUM que formará parte integrante del contrato, dentro de las siguientes especificaciones:
+
+PRIMERA.- A fin de poner en operación el servicio de acceso a internet, EL PROVEEDOR realiza la instalación en el domicilio, oficina o local comercial del CLIENTE, los equipos con las siguientes características: ( {3?equiposInstalados} ), sobre los cuales, mantiene la reserva del dominio, en virtud de que, el costo por instalación pagado por EL CLIENTE y que se detalla en el ANEXO No. 2 del Contrato principal, no es por la adquisición y venta de los equipos, sino exclusivamente por los gastos técnicos y operativos de la instalación del servicio, de tal manera que, una vez que se haya terminado el contrato de prestación de servicios de acceso a internet por cualquiera de las circunstancias determinadas en la cláusula OCTAVA del contrato, EL CLIENTE se encuentra en la obligación legal y moral de la devolución inmediata de los equipos  <@( {4?equiposInstalados} )> , que le fueron instalados al momento de la contratación del servicio, caso contrario, EL CLIENTE deberá asumir los costos y EL PROVEEDOR procederá a la facturación para el cobro del valor de los equipos, que se encuentren especificados en el mercado comercial.
+
+SEGUNDA.- Al momento de la suscripción del presente ADENDUM, EL CLIENTE da su consentimiento y autorización para la suscripción de un PAGARÉ  No. {5?numeroContrato}, girado incondicionalmente a nombre del PROVEEDOR, por el monto de CUATROCIENTOS DÓLARES ($400), como garantía por los equipos instalados por parte del PROVEEDOR y de los meses de servicios vencidos e impagos por el CLIENTE, de tal manera, que el PAGARÉ podrá ser presentado al cobro exclusivamente al momento de la terminación del contrato de servicios, y, el CLIENTE renuncia a presentar excepciones o impugnaciones y se compromete a ejecutar el pago de los valores adeudados y de los equipos dañados o no devueltos al PROVEEDOR.
+
+TERCERA.- En el contrato principal, específicamente en la Cláusula DUODÉCIMA, se refiere a las controversias que se suscitaren entre las partes por motivo del contrato, se ventilarán de acuerdo al ordenamiento jurídico vigente, sin determinar con precisión el procedimiento a seguirse, razón por la cual, mediante este ADENDUM, las partes PROVEEDOR Y EL CLIENTE, consienten renunciar a su domicilio natural, y, se someten a los jueces de la jurisdicción del cantón QUEVEDO, o, de los jueces del lugar de la celebración del Contrato, en mérito de lo establecido en el Art.55 del Código Civil, así como, aceptan someterse a la vía ejecutiva. 
+Para constancia de lo anterior, las partes firman en tres ejemplares del mismo tenor, en la ciudad de {6Canton}, el  {7?fechaActualLarga} .]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

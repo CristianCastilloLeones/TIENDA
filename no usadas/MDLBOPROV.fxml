@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1710.0" stylesheets="@Formatocondinalesdetablas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.MDLBOPROVController">
+   <children>
+      <AnchorPane prefHeight="869.0" prefWidth="1710.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <AnchorPane layoutX="5.0" layoutY="65.0" prefHeight="801.0" prefWidth="1701.0">
+               <children>
+                  <Pane layoutY="-1.0" prefHeight="33.0" prefWidth="1016.0" style="-fx-background-color: #1e90ff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="8.0" text="Proveedores" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="nuevobt" layoutX="139.0" layoutY="47.0" mnemonicParsing="false" onAction="#nuevopro" prefHeight="33.0" prefWidth="101.0" text="Nuevo" />
+                  <TextField layoutX="584.0" layoutY="44.0" prefHeight="33.0" prefWidth="431.0" promptText="Buscar " AnchorPane.leftAnchor="584.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="44.0" />
+                  <TableView fx:id="tablaproveedor" layoutY="97.0" prefHeight="449.0" prefWidth="1016.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="97.0">
+                    <columns>
+                        <TableColumn fx:id="ide" prefWidth="61.0" text="Id." />
+                        <TableColumn fx:id="proveedor" prefWidth="369.0" text="Proveedor" />
+                        <TableColumn fx:id="ruc" prefWidth="75.0" text="Ruc" />
+                        <TableColumn fx:id="correo" prefWidth="169.0" text="e-mail" />
+                        <TableColumn fx:id="telefono" prefWidth="133.0" text="Telefono" />
+                        <TableColumn fx:id="direccion" prefWidth="216.0" text="Direccion" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="150.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/icons8-más-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="956.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../JAVA%20JULIO%2011/Java%20Builder/dd/icons8-basura-32.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="979.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../JAVA%20JULIO%2011/Java%20Builder/dd/icons8-crear-nuevo-32.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
+                  <Button layoutX="38.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
+                  <Button layoutX="77.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="45.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/icons8-imprimir-48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="84.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/icons8-guardar-24.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="63.0" layoutY="31.0" text="Bodega / Inventario">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="34.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../JAVA%20JULIO%2011/Java%20Builder/dd/icons8-vieja-caja-registradora-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="793.0" layoutY="37.0" text="MODULO BODEGA INVENTARIO - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

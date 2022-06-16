@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.DetalleDedudasController">
+   <children>
+      <Label fx:id="NOMBREDEUSURAIO" layoutX="36.0" layoutY="25.0" prefHeight="17.0" prefWidth="304.0" text="NOMBREDEUSURAIO" />
+      <TableView fx:id="facturasporcobrartablacliente" layoutX="38.0" layoutY="51.0" prefHeight="355.0" prefWidth="551.0" AnchorPane.bottomAnchor="94.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="51.0">
+        <columns>
+          <TableColumn fx:id="clienteporcobrar" prefWidth="119.0" text="Detalle " />
+          <TableColumn fx:id="Valorporcobrar" minWidth="0.0" prefWidth="234.0" text="Valor Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="285.0" layoutY="412.0" prefHeight="74.0" prefWidth="304.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="285.0" AnchorPane.rightAnchor="23.0">
+         <children>
+            <Label fx:id="TOTALDEDUDADETALLE" alignment="CENTER" layoutX="81.0" layoutY="19.0" prefHeight="37.0" prefWidth="274.0" text="0.00" textAlignment="CENTER" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="anulartodo" layoutX="405.0" layoutY="21.0" mnemonicParsing="false" text="Anular Todos los Items" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="21.0" />
+      <Button fx:id="dardebaja" layoutX="38.0" layoutY="449.0" mnemonicParsing="false" text="DAR DE BAJA POR VALOR REGISTRADO" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="38.0" />
+      <TextField fx:id="valoaregistrar" layoutX="38.0" layoutY="412.0" prefHeight="25.0" prefWidth="234.0" promptText="VALOR REGISTRADO" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="38.0" />
+   </children>
+</AnchorPane>

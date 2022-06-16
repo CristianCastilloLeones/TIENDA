@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ed875923-5351-4e89-bd6b-341e35d39bea">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="92"/>
+	<parameter name="CONTRATO" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT top (1)* FROM [BDAirnet].[dbo].[VISTACLIENTENUEVOPROG]where CODIGOCONTRATO =$P{CONTRATO}]]>
+	</queryString>
+	<field name="IDCLIENTE" class="java.lang.Integer"/>
+	<field name="lon" class="java.lang.String"/>
+	<field name="lat" class="java.lang.String"/>
+	<field name="ciudad" class="java.lang.String"/>
+	<field name="ponmac" class="java.lang.String"/>
+	<field name="fechainstalacion" class="java.lang.String"/>
+	<field name="ipv4" class="java.lang.String"/>
+	<field name="detalle" class="java.lang.String"/>
+	<field name="nodoprincipal" class="java.lang.String"/>
+	<field name="normal" class="java.lang.String"/>
+	<field name="diapago" class="java.lang.String"/>
+	<field name="diacorte" class="java.lang.String"/>
+	<field name="plancontratado" class="java.lang.String"/>
+	<field name="crearfactura" class="java.lang.String"/>
+	<field name="TARJETA" class="java.lang.Boolean"/>
+	<field name="CHEQUE" class="java.lang.Boolean"/>
+	<field name="EFECTIVO" class="java.lang.Boolean"/>
+	<field name="DISCAPACIDAD" class="java.lang.Boolean"/>
+	<field name="EMAIL" class="java.lang.String"/>
+	<field name="ESTADO" class="java.lang.Boolean"/>
+	<field name="CELULAR2" class="java.lang.String"/>
+	<field name="CELULAR1" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="NOMBRES" class="java.lang.String"/>
+	<field name="APELLIDOS" class="java.lang.String"/>
+	<field name="IDENTIFICACION" class="java.lang.String"/>
+	<field name="CODIGOCLIENTE" class="java.lang.String"/>
+	<field name="CODIGOCONTRATO" class="java.lang.String"/>
+	<field name="VALORMENSUAL" class="java.lang.Double"/>
+	<field name="VALORINTALACION" class="java.lang.Double"/>
+	<field name="TIPOINSTALACION" class="java.lang.String"/>
+	<field name="FECHAINGRESO" class="java.sql.Timestamp"/>
+	<field name="FECHAFIN" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="569" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="18" width="515" height="198" uuid="704a362f-a3cd-416e-8891-0ad99e2a0a5c"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[DECIMA TERCERA.- CONTROVERSIAS: 
+Las partes se comprometen a ejecutar de buena fe las obligaciones recíprocas que contraen mediante este contrato y a realizar todos los esfuerzos requeridos para superar de mutuo acuerdo cualquier controversia, los derechos u obligaciones adquiridos, mediante este contrato. En caso de no existir acuerdo entre las partes, estas se sujetarán a lo establecido en el ordenamiento jurídico vigente.
+
+  
+** Las partes acuerdan que podrán solucionar sus controversias a través de la mediación, en el Centro de Mediación y Arbitraje de la Cámara de Comercio de Quevedo, SI……X……NO………
+Si la mediación no llegare a producirse las partes acuerdan expresamente que se someten a un Arbitraje en Derecho ante el mismo centro, para lo cual renuncian a la jurisdicción ordinaria, y se someten expresamente al arbitraje, obligándose a acatar el laudo que expida el Tribunal Arbitral y se comprometen a no interponer ningún tipo de recurso en contra del laudo dictado, a más de los permitidos en la ley, para todo lo cual presentan las respectivas copias de cédulas de identidad y ciudadanía para el reconocimiento de firmas respectivo.
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="104" y="243" width="320" height="127" uuid="93c33704-04c0-4e28-acdc-5fc22ade7b9a"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="198" y="249" width="155" height="20" uuid="c52579f1-ddf2-4208-89b5-da77d77bfc2d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acepto Cláusula arbitral]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="341" width="175" height="17" uuid="b5a3f9ee-b0e5-48ac-bc8f-28efba9656da"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Firma ABONADO O SUSCRIPTOR ]]></text>
+			</staticText>
+			<line>
+				<reportElement x="117" y="332" width="293" height="1" uuid="57fcb723-bcd7-4267-a3d9-ad5e1e0c2f44"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="381" width="515" height="183" uuid="ec9d9409-65e1-475e-b3db-615bd76bd7d4"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Las notificaciones que correspondan serán entregadas en el domicilio de cada una de las partes señalado en la cláusula primera del presente contrato, cualquier cambio de domicilio debe de ser comunicado por escrito a la otra parte en un plazo de 10 días, a partir del día siguiente en que el cambio se efectué.  
+DECIMA CUARTA.- EMPAQUETAMIENTOS DE SERVICIOS: la contratación incluye empaquetamiento de servicios:       SI ….. NO…X…..
+Los servicios del paquete y los beneficios para cada uno de los mismos están especificados en el ANEXO 1.
+
+DECIMA QUINTA.- ANEXOS: Es parte integrante del presente contrato el ANEXO 1, que contiene las condiciones particulares del servicio, así como los demás anexos y documentos que se incorporen de conformidad con el ordenamiento jurídico.
+
+
+Para constancia de lo anterior las partes firman en TRES  ejemplares del mismo tenor, en el cantón el ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="24" y="546" width="221" height="15" uuid="4ad7a39f-a262-4876-84b1-865c7903f158"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="101" splitType="Stretch">
+			<line>
+				<reportElement x="28" y="39" width="226" height="1" uuid="614f7bca-c1da-484c-b0ed-df5cbd6cf457"/>
+			</line>
+			<line>
+				<reportElement x="305" y="39" width="226" height="1" uuid="f6b72af8-99c6-4b3e-b749-87330da7e20d"/>
+			</line>
+			<staticText>
+				<reportElement x="76" y="44" width="132" height="40" uuid="83e07148-eeba-435b-a27e-4ac6c03eccad"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Galo Alfredo Alava Macas facturasairnet@gmail.com RUC:1204112724001 ]]></text>
+			</staticText>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="302" y="42" width="108" height="14" uuid="56efa16c-721d-4826-8b4e-4fa18e654ebc"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="58" width="124" height="15" uuid="91eb53be-661c-45f3-85c3-31d91722e769"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IDENTIFICACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="415" y="43" width="116" height="14" uuid="199f8b2b-2d6f-4400-ac0c-f009d4a80760"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{APELLIDOS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

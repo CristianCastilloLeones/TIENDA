@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1351.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.VentanaAUXMOVIMIENTOSController">
+    <children>
+        <AnchorPane fx:id="RP" minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="268.0">
+            <children>
+                <AnchorPane layoutX="-1.0" prefHeight="171.0" prefWidth="318.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-9.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane layoutX="16.0" layoutY="83.0" prefHeight="71.0" prefWidth="1661.0" style="-fx-background-color: #5F9EA0;" AnchorPane.bottomAnchor="715.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="82.0">
+                            <children>
+                                <Pane layoutX="-12.0" layoutY="-77.0" prefHeight="160.0" prefWidth="1353.0">
+                                    <children>
+                                        <Label fx:id="TOTALENCAJA" alignment="CENTER" contentDisplay="CENTER" layoutX="614.0" layoutY="73.0" prefHeight="32.0" prefWidth="261.0" text="0.0">
+                                            <font>
+                                                <Font name="System Bold" size="25.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="693.0" layoutY="54.0" text="Total en Efectivo">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="buscar" layoutX="418.0" layoutY="49.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="187.0" text="Realizar Busqueda" />
+                                        <Label contentDisplay="CENTER" layoutX="59.0" layoutY="3.0" prefHeight="48.0" prefWidth="203.0" text="Gestion Empresarial">
+                                            <font>
+                                                <Font name="System Bold" size="21.0" />
+                                            </font>
+                                        </Label>
+                                      <DatePicker fx:id="finaldebusqueda" layoutX="218.0" layoutY="82.0" prefHeight="25.0" prefWidth="194.0" promptText="Seleccionar la fecha Terminal" />
+                              <ComboBox fx:id="CAJERO" layoutX="187.0" layoutY="51.0" prefHeight="25.0" prefWidth="224.0" promptText="Seleccione el Cajero" />
+                                      <Label layoutX="28.0" layoutY="67.0" text="Busqueda por Fecha">
+                                          <font>
+                                              <Font name="System Bold Italic" size="11.0" />
+                                          </font>
+                                      </Label>
+                                      <DatePicker fx:id="iniciodebusqueda" layoutX="28.0" layoutY="82.0" promptText="Selecione la fecha Inicial" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </Pane>
+                        <Pane layoutX="21.0" layoutY="50.0" prefHeight="34.0" prefWidth="1617.0" AnchorPane.bottomAnchor="678.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="49.0">
+                            <children>
+                                <Label layoutX="14.0" layoutY="7.0" text="Estilo de Busqueda">
+                                    <font>
+                                        <Font name="System Bold Italic" size="13.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <ImageView fitHeight="40.0" fitWidth="65.0" layoutX="22.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="817.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1646.0" AnchorPane.topAnchor="10.0">
+                            <image>
+                                <Image url="@../imagenes/icons8-contabilidad-48.png" />
+                            </image>
+                        </ImageView>
+                        <TabPane layoutX="2.0" layoutY="122.0" prefHeight="605.0" prefWidth="1346.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-556.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1069.0" AnchorPane.topAnchor="122.0">
+                            <tabs>
+                                <Tab fx:id="efectivotab" text="Pagos &amp; Recaudos">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="1332.0">
+                                            <children>
+                                                <TextField fx:id="totalpagoefecivo" alignment="CENTER" editable="false" layoutX="794.0" layoutY="460.0" prefHeight="33.0" prefWidth="240.0">
+                                                    <font>
+                                                        <Font size="24.0" />
+                                                    </font>
+                                                </TextField>
+                                                <Label layoutX="566.0" layoutY="469.0" text="Valor Recaudado">
+                                                    <font>
+                                                        <Font name="System Bold" size="23.0" />
+                                                    </font>
+                                                </Label>
+                                                <TableView fx:id="pagoefectivo" layoutX="14.0" layoutY="36.0" prefHeight="394.0" prefWidth="1324.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="8.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="numero" prefWidth="85.0" text="Numero" />
+                                                        <TableColumn fx:id="cliente" prefWidth="508.0" text="Cliente" />
+                                                        <TableColumn fx:id="valor" prefWidth="309.0" text="Valor" />
+                                                        <TableColumn fx:id="fecha" prefWidth="75.0" text="Fecha" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                    <TextField fx:id="clientebusqueefectivo" layoutX="14.0" layoutY="8.0" prefHeight="25.0" prefWidth="624.0" promptText="Ingrese el nombre del cliente" />
+                                    <Button fx:id="btnbusqedaefectivo" layoutX="647.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="165.0" text="Realizar Busqueda" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="otrosingresostab" text="Depositos">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="519.0" prefWidth="1383.0">
+                                            <children>
+                                                <TableView fx:id="tablaancos" layoutX="14.0" layoutY="42.0" prefHeight="390.0" prefWidth="1300.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="32.0">
+                                                    <columns>
+                                          <TableColumn fx:id="nitem" prefWidth="75.0" text="N°" />
+                                                        <TableColumn fx:id="clientebancos" prefWidth="75.0" text="Cliente " />
+                                                        <TableColumn fx:id="fechabancos" prefWidth="75.0" text="Fecha" />
+                                                        <TableColumn fx:id="valorbancos" prefWidth="75.0" text="Valor" />
+                                                        <TableColumn fx:id="evidenciabancos" prefWidth="75.0" text="Evidencia" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <TextField fx:id="totalbancos" disable="true" layoutX="762.0" layoutY="461.0" AnchorPane.leftAnchor="762.0" />
+                                                <Label layoutX="500.0" layoutY="464.0" text="Valor Recaudado">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                    <TextField fx:id="busquedadeposito" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="449.0" promptText="Ingrese el nombre del cliente" />
+                                    <Button fx:id="busquedaBancosbtn" layoutX="474.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Realizar Busqueda" />
+                                    <Label fx:id="total_item" layoutX="28.0" layoutY="444.0" text="Label" />
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                        <Tab text="Otros Ingresos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                                <TableView fx:id="cobroinstalaciones" layoutX="39.0" layoutY="108.0" prefHeight="330.0" prefWidth="1165.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="142.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="clienteinstalaciones" prefWidth="75.0" text="Cliente" />
+                                                        <TableColumn fx:id="fechainstalacion" prefWidth="75.0" text="Fecha" />
+                                                        <TableColumn fx:id="valorinstalaciones" prefWidth="75.0" text="Valor" />
+                                                        <TableColumn fx:id="estadoinstalaciones" prefWidth="75.0" text="N° Factura" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <Label layoutX="33.0" layoutY="51.0" text="Instalacio/Migracion/C. Domicilio">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="473.0" layoutY="467.0" text="Valor Recaudado" AnchorPane.leftAnchor="473.0">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="totalinstalaciones" disable="true" layoutX="695.0" layoutY="465.0" AnchorPane.leftAnchor="695.0" />
+                                    <Label alignment="CENTER" layoutX="506.0" layoutY="61.0" prefHeight="17.0" prefWidth="79.0" style="-fx-background-color: #008080;" text="INSTLACION" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <Label alignment="CENTER" layoutX="704.0" layoutY="61.0" prefHeight="17.0" prefWidth="79.0" style="-fx-background-color: #F7DC6F;" text="MIGRACION">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <Label layoutX="602.0" layoutY="61.0" style="-fx-background-color: #85929E;" text="C. DOMICILIO">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="Egresos">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                                <TableView fx:id="eventos" layoutX="78.0" layoutY="48.0" prefHeight="384.0" prefWidth="1072.0" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="196.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="clienteeve" prefWidth="150.0" text="Solicitado por: " />
+                                                        <TableColumn fx:id="causa" prefWidth="250.0" text="Causa" />
+                                                        <TableColumn fx:id="estado" prefWidth="75.0" text="Valor" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <Label layoutX="65.0" layoutY="26.0" text="Egresos" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="1217.0">
+                                                    <font>
+                                                        <Font name="System Bold" size="15.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="514.0" layoutY="461.0" text="Valor Egresado" AnchorPane.leftAnchor="514.0">
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="egresos" disable="true" layoutX="977.0" layoutY="458.0" AnchorPane.leftAnchor="977.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+                            
+               
+    </children>
+</Pane>

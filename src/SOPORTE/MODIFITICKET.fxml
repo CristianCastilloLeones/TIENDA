@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="896.0" style="-fx-background-color: eaeaea;" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SOPORTE.MODIFITICKETController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="1.0" prefHeight="63.0" prefWidth="763.0">
+         <children>
+            <Label fx:id="cdt" layoutX="441.0" layoutY="14.0" text="ST00126" />
+            <Separator layoutX="37.0" layoutY="37.0" prefHeight="0.0" prefWidth="655.0" />
+            <ImageView fitHeight="23.0" fitWidth="375.0" layoutX="66.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/barsgreen.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="37.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-sin-red-48.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="76.0" layoutY="14.0" text="Responder Ticket" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TabPane layoutX="29.0" layoutY="48.0" prefHeight="370.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Añadir Respuesta">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="308.0" prefWidth="849.0">
+                     <children>
+                        <ImageView fx:id="evidencia" fitHeight="35.0" fitWidth="47.0" layoutX="157.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true" />
+                        <Pane layoutX="6.0" layoutY="7.0" prefHeight="150.0" prefWidth="841.0" style="-fx-background-color: eaeaea;">
+                           <children>
+                              <Label fx:id="cient" layoutY="14.0" text="Cliente : Juan Pepito">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="detalle" layoutY="40.0" text="El internet no me carga en una telefono " />
+                              <ImageView fx:id="evidencia" fitHeight="150.0" fitWidth="200.0" layoutX="576.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </Pane>
+                        <TextArea fx:id="respuest" layoutY="182.0" prefHeight="115.0" prefWidth="494.0" promptText="Responder" />
+                        <Button fx:id="adjuntar" layoutY="302.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="109.0" text="Adjuntar archivo" />
+                        <CheckBox fx:id="habilitartecnico" layoutX="533.0" layoutY="182.0" mnemonicParsing="false" text="Asignar Tecnico" />
+                        <TextField fx:id="tecnoccambiante" disable="true" layoutX="533.0" layoutY="208.0" prefHeight="32.0" prefWidth="265.0" promptText="Elegir" />
+                        <Button fx:id="actualizartecnico" disable="true" layoutX="533.0" layoutY="250.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="152.0" text="Cambiar Tecnico" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="respon" graphicTextGap="5.0" layoutX="174.0" layoutY="453.0" mnemonicParsing="false" onAction="#guardarycerrar" prefHeight="54.0" prefWidth="238.0" text="Responder y cerrar ticket" />
+      <Button fx:id="solores" layoutX="29.0" layoutY="453.0" mnemonicParsing="false" onAction="#guardar" prefHeight="54.0" prefWidth="128.0" text="Responder" />
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="38.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-flecha-responder-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="183.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-flecha-responder-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="201.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-cancelar-48.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

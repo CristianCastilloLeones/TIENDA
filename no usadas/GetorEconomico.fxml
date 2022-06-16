@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1710.0" style="-fx-background-color: #D3D3D3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.GetorEconomicoController">
+   <top>
+      <Pane prefHeight="122.0" prefWidth="1710.0" style="-fx-border-color: #C71585;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="45.0" layoutY="14.0" text="Gestion Economico">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Pane layoutX="25.0" layoutY="45.0" prefHeight="21.0" prefWidth="1672.0" style="-fx-background-color: #483D8B;" />
+            <Label layoutX="31.0" layoutY="91.0" text="Rango de Busqueda : " />
+            <DatePicker fx:id="iniciodebusqueda" layoutX="195.0" layoutY="87.0" />
+            <Label layoutX="254.0" layoutY="66.0" text="Desde " />
+            <DatePicker fx:id="finaldebusqueda" layoutX="385.0" layoutY="87.0" />
+            <Label layoutX="458.0" layoutY="66.0" text="Hasta" />
+            <Button fx:id="mostrar" layoutX="570.0" layoutY="87.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Mostrar" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="580.0" prefWidth="575.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="25.0" layoutY="27.0" text="Facturas Cobradas Efectivo " />
+            <Label fx:id="facturascobradas" layoutX="337.0" layoutY="27.0" text="0" />
+            <TableView fx:id="tablafactura" layoutX="22.0" layoutY="68.0" prefHeight="224.0" prefWidth="523.0">
+              <columns>
+                <TableColumn fx:id="cliente" prefWidth="75.0" text="Cliente" />
+                <TableColumn fx:id="fecha" prefWidth="75.0" text="Fecha" />
+                  <TableColumn fx:id="valor" prefWidth="75.0" text="Valor" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label layoutX="22.0" layoutY="305.0" text="Facturas Cobradas Otros" />
+            <TableView fx:id="facturasdeposito" layoutX="22.0" layoutY="329.0" prefHeight="184.0" prefWidth="514.0">
+              <columns>
+                <TableColumn fx:id="clientedepsoito" prefWidth="75.0" text="Cliente" />
+                <TableColumn fx:id="fechadeposito" prefWidth="75.0" text="Fecha" />
+                  <TableColumn fx:id="valordeposito" prefWidth="75.0" text="Valor" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <Pane prefHeight="547.0" prefWidth="464.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="21.0" layoutY="25.0" text="Eventos" />
+            <Label fx:id="eventosrealizados" layoutX="292.0" layoutY="25.0" text="0" />
+            <TableView fx:id="eventos" layoutX="21.0" layoutY="74.0" prefHeight="405.0" prefWidth="621.0">
+              <columns>
+                <TableColumn fx:id="clienteeve" prefWidth="75.0" text="Solicitado por:" />
+                <TableColumn fx:id="causa" prefWidth="75.0" text="Causa" />
+                  <TableColumn fx:id="estado" prefWidth="75.0" text="Cantidad" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+   </center>
+   <right>
+      <Pane prefHeight="580.0" prefWidth="460.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Facturas por Cobrar" />
+            <Label fx:id="facturasporcobrar" layoutX="230.0" layoutY="14.0" text="0" />
+            <TableView fx:id="facturasporcobrartabla" layoutX="14.0" layoutY="74.0" prefHeight="408.0" prefWidth="433.0">
+              <columns>
+                <TableColumn fx:id="clientefactxcobrar" prefWidth="75.0" text="Cliente" />
+                <TableColumn fx:id="fechaporcobrar" prefWidth="75.0" text="Fecha" />
+                  <TableColumn fx:id="valorporcobrar" prefWidth="75.0" text="Valor" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </Pane>
+   </right>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="33.0" layoutY="36.0" text="Actual en Caja" />
+            <Label layoutX="33.0" layoutY="82.0" text="Cuentas por Cobrar Total" />
+            <Label layoutX="33.0" layoutY="121.0" text="Intalaciones efectudas" />
+            <Label layoutX="334.0" layoutY="14.0" text="Ingreso de Dinero" />
+            <Label layoutX="595.0" layoutY="14.0" text="Salida de Dinero " />
+            <Label layoutX="842.0" layoutY="14.0" text="Total de dinero" />
+            <Label fx:id="totaldeingreso" layoutX="352.0" layoutY="33.0" text="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalegreso" layoutX="596.0" layoutY="31.0" text="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalactual" layoutX="842.0" layoutY="31.0" text="0.0">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="468.0" layoutY="27.0" text="-">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="733.0" layoutY="28.0" text="=">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="instalacionesefectuadas" layoutX="207.0" layoutY="110.0" text="0.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="cuentasporcobrartotal" layoutX="207.0" layoutY="68.0" text="0.0" textAlignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

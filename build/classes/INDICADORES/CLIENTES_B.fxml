@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="1710.0" stylesheets="@Formatocondinalesdetablas.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.CLIENTES_BController">
+   <children>
+      <AnchorPane layoutY="2.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="1710.0" style="-fx-background-color: #eaeaea;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+         <children>
+            <AnchorPane layoutX="3.0" layoutY="20.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="1693.0" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <TableView fx:id="tikeprincipal" blendMode="MULTIPLY" layoutX="25.0" layoutY="49.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="504.0" prefWidth="966.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="702.0" AnchorPane.topAnchor="49.0">
+                     <columns>
+                        <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="usuario" maxWidth="700.0" minWidth="248.0" prefWidth="248.0" text="Cliente" />
+                        <TableColumn fx:id="cedula" maxWidth="600.0" minWidth="159.0" prefWidth="251.0" text="IDENTIFICACION" />
+                        <TableColumn fx:id="deuda" prefWidth="75.0" text="Deuda" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TableView>
+                  <Button fx:id="buscar" layoutX="148.0" layoutY="14.0" mnemonicParsing="false" text="Buscar " />
+                  <Button fx:id="imprimir" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" text="Exportar a Excel" />
+                  <Separator layoutX="341.0" layoutY="12.0" prefHeight="0.0" prefWidth="1079.0" />
+                  <Label layoutX="341.0" layoutY="20.0" text="MODULO DE CLIENTES - Software de Control ISP v 3.0" textFill="#948d8d">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="Revision" layoutX="220.0" layoutY="14.0" mnemonicParsing="false" text="Revision" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="8.0" text="MODULO DE CLIENTES - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="576.0" layoutY="594.0" text="TOTAL DE DEUDA" />
+            <TextField fx:id="TOTALDEUDA" alignment="CENTER" editable="false" layoutX="730.0" layoutY="589.0" prefHeight="25.0" prefWidth="240.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="cargando" fitHeight="81.0" fitWidth="137.0" layoutX="99.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/gif-cargando-sin-fondo-3.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

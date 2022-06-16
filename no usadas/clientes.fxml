@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1710.0" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.ClientesController">
+   <children>
+      <AnchorPane prefHeight="869.0" prefWidth="1710.0" style="-fx-background-color: #dcdcdc;">
+         <children>
+            <AnchorPane layoutY="65.0" prefHeight="804.0" prefWidth="1711.0" style="-fx-background-color: #f0ffff;">
+               <children>
+                  <Pane layoutY="-1.0" prefHeight="33.0" prefWidth="1667.0" style="-fx-background-color: #4169e1;" AnchorPane.bottomAnchor="772.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="8.0" text="Clientes" textFill="WHITE">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onAction="#NUEVOCLIENTE" style="-fx-background-color: #4169e1; -fx-border-color: #a9a9a9;" text="+ Nuevo Cliente" textFill="WHITE" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="1562.0" AnchorPane.topAnchor="40.0" />
+                  <TextField fx:id="buscarcliente" layoutX="836.0" layoutY="41.0" prefHeight="25.0" prefWidth="858.0" promptText="Buscar " AnchorPane.bottomAnchor="738.0" AnchorPane.leftAnchor="836.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="41.0" />
+                  <Pane layoutX="14.0" layoutY="75.0" prefHeight="717.0" prefWidth="1684.0" style="-fx-background-color: #483D8B;">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="693.0" prefWidth="509.0" style="-fx-background-color: #4682B4;">
+                           <children>
+                              <BarChart fx:id="crecimiento" alternativeColumnFillVisible="true" layoutX="5.0" layoutY="60.0" prefHeight="400.0" prefWidth="487.0" title="Tasa de Crecimiento">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children></Pane>
+                        <Pane layoutX="532.0" layoutY="14.0" prefHeight="693.0" prefWidth="527.0" style="-fx-background-color: #4682B4;">
+                           <children>
+                              <BarChart fx:id="tasaclientes" alternativeColumnFillVisible="true" layoutX="21.0" layoutY="51.0" title="Tasa de Eventos de Clientes">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="1071.0" layoutY="14.0" prefHeight="693.0" prefWidth="599.0" style="-fx-background-color: #4682B4;">
+                           <children>
+                              <Button fx:id="empezar" layoutX="447.0" layoutY="473.0" mnemonicParsing="false" text="INICIAR MONITOREO" />
+                              <Label layoutX="26.0" layoutY="28.0" prefHeight="21.0" prefWidth="229.0" text="MONITOREO DE CONECTIVIDAD">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.21904761904761905" radius="0.5">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <TextArea fx:id="resultadomonitoreo" layoutX="26.0" layoutY="127.0" prefHeight="291.0" prefWidth="557.0" style="-fx-background-color: #000000;" />
+                              <Label fx:id="cliente" layoutX="291.0" layoutY="30.0" text="NOMBRE DEL CLIENTE" />
+                              <Label fx:id="ipv" layoutX="26.0" layoutY="60.0" text="172.0.0.0" />
+                              <Button fx:id="imprmir" layoutX="26.0" layoutY="479.0" mnemonicParsing="false" text="IMPRIMIR ESTATUS" />
+                           </children></Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+            <Label layoutX="14.0" layoutY="20.0" text="Clientes">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

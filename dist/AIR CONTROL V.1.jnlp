@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AIR CONTROL V.1.jnlp">
+  <information>
+    <title>AIR CONTROL V.1</title>
+    <vendor>CrisLEs</vendor>
+    <description>Software de Administracion ISP</description>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Xmx1024m "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXApplication4.jar" size="3825915" download="eager" />
+    <jar href="lib\MITyCLibAPI-1.1.7.jar" size="188363" download="eager" />
+    <jar href="lib\MITyCLibCert-1.1.7.jar" size="4540587" download="eager" />
+    <jar href="lib\MITyCLibCrypt-1.1.7.jar" size="134678" download="eager" />
+    <jar href="lib\MITyCLibOCSP-1.1.7.jar" size="124654" download="eager" />
+    <jar href="lib\MITyCLibPolicy-1.1.7.jar" size="111992" download="eager" />
+    <jar href="lib\MITyCLibTSA-1.1.7.jar" size="75432" download="eager" />
+    <jar href="lib\MITyCLibTrust-1.1.7.jar" size="322577" download="eager" />
+    <jar href="lib\MITyCLibXADES-1.1.7.jar" size="542074" download="eager" />
+    <jar href="lib\SRI_CL_FACTELECT.jar" size="27534" download="eager" />
+    <jar href="lib\Util.jar" size="14063" download="eager" />
+    <jar href="lib\agrona-0.9.21-javadoc.jar" size="874675" download="eager" />
+    <jar href="lib\apache-commons-net.jar" size="482996" download="eager" />
+    <jar href="lib\barbecue-1.5-beta1.jar" size="99222" download="eager" />
+    <jar href="lib\barcode4j-2.1.jar" size="290622" download="eager" />
+    <jar href="lib\bcmail-1.46.3.jar" size="880197" download="eager" />
+    <jar href="lib\common-lang3.jar" size="669304" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.3.jar" size="248553" download="eager" />
+    <jar href="lib\commons-codec-1.2.jar" size="33701" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="625106" download="eager" />
+    <jar href="lib\commons-collections4-4.1.jar" size="799936" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="215784" download="eager" />
+    <jar href="lib\commons-httpclient-3.0.1.jar" size="295078" download="eager" />
+    <jar href="lib\commons-lang-2.4.jar" size="277489" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="65861" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="57577" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="1057907" download="eager" />
+    <jar href="lib\gembox-spreadsheet.jar" size="8908070" download="eager" />
+    <jar href="lib\groovy-all-1.7.5.jar" size="5791612" download="eager" />
+    <jar href="lib\groovy-all-1.8.0.jar" size="6286615" download="eager" />
+    <jar href="lib\iText-2.1.7.jar" size="1183617" download="eager" />
+    <jar href="lib\jasperreports-6.12.2.jar" size="5866823" download="eager" />
+    <jar href="lib\jasperreports-custom-visualization-6.12.2.jar" size="135656" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.12.2.jar" size="2483814" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.12.2.jar" size="5870603" download="eager" />
+    <jar href="lib\jasperreports-metadata-6.12.2.jar" size="12709" download="eager" />
+    <jar href="lib\javafx-swt.jar" size="40452" download="eager" />
+    <jar href="lib\javafx.base.jar" size="821652" download="eager" />
+    <jar href="lib\javafx.controls.jar" size="2665969" download="eager" />
+    <jar href="lib\javafx.fxml.jar" size="137771" download="eager" />
+    <jar href="lib\javafx.graphics.jar" size="4640017" download="eager" />
+    <jar href="lib\javafx.media.jar" size="292745" download="eager" />
+    <jar href="lib\javafx.swing.jar" size="130005" download="eager" />
+    <jar href="lib\javafx.web.jar" size="770813" download="eager" />
+    <jar href="lib\javax.mail.jar" size="697034" download="eager" />
+    <jar href="lib\jdom-2.0.6.jar" size="327554" download="eager" />
+    <jar href="lib\jsch-0.1.55.jar" size="299225" download="eager" />
+    <jar href="lib\mssql-jdbc-8.4.1.jre8.jar" size="1321337" download="eager" />
+    <jar href="lib\poi-3.11.jar" size="2227565" download="eager" />
+    <jar href="lib\responsivefx-0.8.jar" size="16517" download="eager" />
+    <jar href="lib\webservices-api-1.6.1.jar" size="202728" download="eager" />
+    <jar href="lib\webservices-tools-1.6.1.jar" size="3893550" download="eager" />
+    <jar href="lib\wscompile-2.3.0.2.jar" size="903647" download="eager" />
+    <jar href="lib\xml-apis-1.3.04.jar" size="247466" download="eager" />
+    <jar href="lib\xmlsec-1.4.2-ADSI-1.0.jar" size="651604" download="eager" />
+    <jar href="lib\xmlsec-1.4.2-ADSI-1.1.jar" size="678677" download="eager" />
+  </resources>
+<security>
+  <all-permissions/>
+</security>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafxapplication4.JavaFXApplication4"  name="AIR CONTROL V.1" />
+  <update check="background"/>
+</jnlp>

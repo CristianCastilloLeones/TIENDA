@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="697.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="INDICADORES.VENTANAAUXILIARController">
+   <children>
+      <TableView fx:id="tikeprincipal" layoutX="41.0" layoutY="44.0" prefHeight="557.0" prefWidth="843.0" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="44.0">
+        <columns>
+          <TableColumn fx:id="IDENTIFICACION" prefWidth="299.0" sortable="false" text="IDENTIFICACION" />
+          <TableColumn fx:id="CLIENTE" prefWidth="205.0" text="CLIENTE" />
+            <TableColumn fx:id="DEUDA" prefWidth="337.0" text="DEUDA" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <AnchorPane layoutX="524.0" layoutY="636.0" prefHeight="51.0" prefWidth="365.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="524.0" AnchorPane.rightAnchor="35.0">
+         <children>
+            <TextField fx:id="TOTALDEUDA" alignment="CENTER" layoutX="13.0" layoutY="6.0" prefHeight="39.0" prefWidth="336.0" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="16.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="refresh" layoutX="41.0" layoutY="636.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="400.0" text="ACTUALIZAR" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="483.0" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="50.0" left="13.0" right="13.0" top="13.0" />
+   </opaqueInsets>
+</AnchorPane>

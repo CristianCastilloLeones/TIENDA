@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="968.0" stylesheets="@EstilosGenerales.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CAJA.Generador_de_FacturasController">
+   <children>
+      <Pane layoutX="13.0" layoutY="12.0" prefHeight="520.0" prefWidth="940.0" style="-fx-border-color: #663399;" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Label layoutX="28.0" layoutY="34.0" text="Nº Factura " />
+            <Label layoutX="28.0" layoutY="62.0" text="Cliente" />
+            <Label layoutX="512.0" layoutY="30.0" text="Fecha Generada" />
+            <Label layoutX="513.0" layoutY="71.0" text="Fecha de Pago" />
+            <TextField fx:id="numerofact" disable="true" layoutX="96.0" layoutY="30.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextField fx:id="nombrecliente" layoutX="96.0" layoutY="56.0" prefHeight="25.0" prefWidth="324.0" />
+            <TextField fx:id="fechagenera" disable="true" layoutX="610.0" layoutY="30.0" prefHeight="25.0" prefWidth="171.0" />
+            <TextField fx:id="fechapago" disable="true" layoutX="610.0" layoutY="66.0" prefHeight="25.0" prefWidth="171.0" />
+            <TextField fx:id="subto" disable="true" layoutX="767.0" layoutY="424.0" />
+            <TextField fx:id="iva" disable="true" layoutX="767.0" layoutY="453.0" />
+            <TextField fx:id="total" disable="true" layoutX="767.0" layoutY="482.0" />
+            <Label layoutX="710.0" layoutY="428.0" text="Subtotal" underline="true" />
+            <Label layoutX="727.0" layoutY="457.0" text="Iva" underline="true" />
+            <Label layoutX="722.0" layoutY="486.0" text="Total" underline="true" />
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="21.0" prefWidth="163.0" text="Generacion de Facturas">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="26.0" layoutY="113.0" prefHeight="0.0" prefWidth="906.0" />
+            <TableView fx:id="tabladetalle" layoutX="26.0" layoutY="125.0" prefHeight="291.0" prefWidth="906.0">
+              <columns>
+                  <TableColumn fx:id="idval" prefWidth="75.0" text="N°  FACTURA" />
+                <TableColumn fx:id="canti" prefWidth="75.0" text="Cantidad" />
+                <TableColumn fx:id="detalle" editable="false" prefWidth="400.0" text="Detalle" />
+                  <TableColumn fx:id="pvp" editable="false" prefWidth="100.0" text="Precio Unitario" />
+                  <TableColumn fx:id="pvpt" editable="false" prefWidth="100.0" text="Precio Total" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="aunlarrece" layoutX="14.0" layoutY="482.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="247.0" text="Anular Factura" />
+            <Label layoutX="20.0" layoutY="470.0" />
+            <Label layoutX="29.0" layoutY="85.0" text="C.I/RUC" />
+            <TextField fx:id="cedulatext" disable="true" layoutX="96.0" layoutY="83.0" prefHeight="25.0" prefWidth="324.0" />
+            <Button fx:id="AUTORIZARYENVIAR" layoutX="547.0" layoutY="453.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="149.0" text="GENERAR" />
+            <Label fx:id="clavaccessri" alignment="CENTER" layoutX="510.0" layoutY="8.0" prefHeight="17.0" prefWidth="427.0">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

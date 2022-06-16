@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="1673.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AJUSTE.AJUSTESController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1667.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <Label layoutX="1355.0" layoutY="37.0" text="AJUSTES Y CONFIGURACIONES - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Rectangle height="30.0" layoutX="17.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#a1a1a1" />
+                        <Stop color="#979797" offset="0.3563218390804598" />
+                        <Stop color="#eaeaea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="47.0" layoutY="13.0" text="Ajustes de Aircontrol" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="18.0" layoutY="44.0" prefHeight="3.0" prefWidth="1289.0" />
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-engranaje-48.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="19.0" layoutY="56.0" prefHeight="608.0" prefWidth="1637.0">
+         <children>
+            <TabPane layoutX="14.0" layoutY="14.0" prefHeight="676.0" prefWidth="1328.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Gestion Personal">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="498.0" layoutY="15.0" prefHeight="618.0" prefWidth="637.0">
+                                 <children>
+                                    <Button fx:id="editarcambios" layoutX="544.0" layoutY="579.0" mnemonicParsing="false" text="Actualizar" />
+                                    <CheckBox fx:id="edicontraseña" layoutX="459.0" layoutY="56.0" mnemonicParsing="false" text="Cambiar  Contraseña" />
+                                    <CheckBox fx:id="editDireccion" layoutX="462.0" layoutY="132.0" mnemonicParsing="false" text="Actualizar Direccion" />
+                                    <CheckBox fx:id="edittelefono" layoutX="462.0" layoutY="190.0" mnemonicParsing="false" text="Actualizar Telefono" />
+                                    <CheckBox fx:id="ediemail" layoutX="461.0" layoutY="245.0" mnemonicParsing="false" text="Actualizar  e-mail" />
+                                    <TextField fx:id="ci" layoutX="443.0" layoutY="73.0" promptText="Repita la nueva contraseña" />
+                                    <TextField fx:id="actualcontraseña" layoutX="31.0" layoutY="73.0" prefHeight="25.0" prefWidth="174.0" promptText="Ingrese Su Actual Contraseña" />
+                                    <TextField fx:id="nuevacontraseña" layoutX="231.0" layoutY="73.0" prefHeight="25.0" prefWidth="174.0" promptText="Ingrese su  nueva contraseña" />
+                                    <TextField fx:id="direccion" layoutX="31.0" layoutY="149.0" prefHeight="37.0" prefWidth="600.0" />
+                                    <TextField fx:id="telefono" layoutX="31.0" layoutY="207.0" prefHeight="38.0" prefWidth="600.0" />
+                                    <TextField fx:id="email" layoutX="31.0" layoutY="262.0" prefHeight="38.0" prefWidth="600.0" />
+                                    <Button fx:id="NuevoPersonal" layoutX="41.0" layoutY="567.0" mnemonicParsing="false" text="Nuevo Personal" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="PestañaServerCorreo" text="Servidor de Correo">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="272.0" layoutY="5.0" prefHeight="635.0" prefWidth="636.0">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="20.0" text="CORREO EMISOR" />
+                                    <TextField fx:id="correoemisor" editable="false" layoutX="24.0" layoutY="37.0" prefHeight="25.0" prefWidth="584.0" />
+                                    <TextField fx:id="puertocorreo" editable="false" layoutX="22.0" layoutY="130.0" prefHeight="25.0" prefWidth="360.0" />
+                                    <Label layoutX="25.0" layoutY="165.0" text="Contraseña Correo Emisor" />
+                                    <Label layoutX="24.0" layoutY="113.0" text="PUERTO " />
+                                    <PasswordField fx:id="contreseacorreoemisor" layoutX="24.0" layoutY="182.0" prefHeight="25.0" prefWidth="356.0" />
+                                    <Button fx:id="guardarcambioscorreo" layoutX="498.0" layoutY="580.0" mnemonicParsing="false" text="Guardar Cambios" />
+                                    <Label layoutX="22.0" layoutY="71.0" text="Mail Smtp Host" />
+                                    <TextField fx:id="mailsmtphost" layoutX="24.0" layoutY="88.0" prefHeight="25.0" prefWidth="582.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="PestañabaseDatos" text="Base de Datos">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="436.0" layoutY="6.0" prefHeight="636.0" prefWidth="678.0">
+                                 <children>
+                                    <Label layoutX="23.0" layoutY="30.0" text="HOST o IP" />
+                                    <TextField fx:id="rutaserver" layoutX="23.0" layoutY="55.0" prefHeight="30.0" prefWidth="393.0" promptText="172.16.0.0  o //servidor...." />
+                                    <Button fx:id="DirectoriosdeArchivos" layoutX="24.0" layoutY="394.0" mnemonicParsing="false" text="Crear/Restaurar Directorios" />
+                                    <CheckBox fx:id="pruebas" layoutX="23.0" layoutY="297.0" mnemonicParsing="false" text="PRUEBAS" />
+                                    <CheckBox fx:id="produccion" layoutX="138.0" layoutY="297.0" mnemonicParsing="false" text="PRODUCCION" />
+                                    <Label layoutX="23.0" layoutY="272.0" text="Ambiente ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="cambiarambiente" layoutX="286.0" layoutY="293.0" mnemonicParsing="false" text="CAMBIAR AMBIENTE DE TRABAJO" />
+                                    <Button fx:id="guardarcambiosruta" layoutX="20.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Guardar Cambios" />
+                                    <Button fx:id="ACTUALIZARDIRECTORIOS" layoutX="487.0" layoutY="590.0" mnemonicParsing="false" text="Crear/Restaurar Propiedades" />
+                                    <TextField fx:id="NombreBD" layoutX="21.0" layoutY="111.0" prefHeight="25.0" prefWidth="390.0" />
+                                    <TextField fx:id="UsuarioBD" layoutX="21.0" layoutY="153.0" prefHeight="25.0" prefWidth="390.0" />
+                                    <Label layoutX="23.0" layoutY="94.0" text="Nombre Base Datos" />
+                                    <Label layoutX="21.0" layoutY="136.0" text="Usuario de Conexion de Base de Datos" />
+                                    <Label layoutX="21.0" layoutY="178.0" text="Contraseña de Conexion Base de Datos" />
+                                    <PasswordField fx:id="contraseñaBD" layoutX="20.0" layoutY="195.0" />
+                                    <Label layoutX="20.0" layoutY="14.0" text="Motor de Datos ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Separator layoutX="24.0" layoutY="263.0" prefHeight="3.0" prefWidth="631.0" />
+                                    <Separator layoutX="24.0" layoutY="334.0" prefHeight="3.0" prefWidth="626.0" />
+                                    <Label layoutX="24.0" layoutY="345.0" text="Directorios &amp; Utilidades">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Label>
+                                    <TextField fx:id="directoriosyutilidades" layoutX="24.0" layoutY="362.0" prefHeight="25.0" prefWidth="459.0" />
+                                    <Button fx:id="seleccionardirectorios" layoutX="496.0" layoutY="362.0" mnemonicParsing="false" text="Seleccionar Directorio" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Licencia">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

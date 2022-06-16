@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="763.0" style="-fx-background-color: eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LOGIN.LoginController">
+   <children>
+      <AnchorPane fx:id="panelprincipal" layoutY="1.0" prefHeight="476.0" prefWidth="763.0">
+         <children>
+            <ProgressIndicator fx:id="pcind" layoutX="342.0" layoutY="345.0" prefHeight="40.0" prefWidth="63.0" progress="0.0" visible="false" />
+         </children></AnchorPane>
+      <ImageView fx:id="imagenvisor" fitHeight="93.0" fitWidth="168.0" layoutX="26.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/logo-aircontrol-nuevo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="principal" layoutX="143.0" layoutY="154.0" prefHeight="212.0" prefWidth="470.0">
+         <children>
+            <TextField fx:id="usi" layoutX="110.0" layoutY="48.0" prefHeight="25.0" prefWidth="250.0" promptText="Usuario" />
+            <Button fx:id="entrar" layoutX="111.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="250.0" text="Entrar">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="70.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-usuario-50.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="31.0" layoutX="70.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/bloquear.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="pass1" layoutX="110.0" layoutY="85.0" prefHeight="25.0" prefWidth="226.0" promptText="Contraseña" />
+            <ImageView fx:id="mostrar" fitHeight="25.0" fitWidth="23.0" layoutX="337.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/icons8-eye-checked-48.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="mostrartexto" layoutX="110.0" layoutY="85.0" prefHeight="25.0" prefWidth="226.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="etiqu3" layoutX="26.0" layoutY="105.0" prefHeight="15.0" prefWidth="143.0" text="Software de Control ISP v 1.0" textFill="#c6c6c6">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Separator fx:id="separador1" layoutX="26.0" layoutY="126.0" prefHeight="13.0" prefWidth="704.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <Separator fx:id="separador2" layoutX="26.0" layoutY="392.0" prefHeight="13.0" prefWidth="704.0" />
+      <Label fx:id="etiqu2" layoutX="515.0" layoutY="412.0" prefHeight="15.0" prefWidth="215.0" text="Concedido bajo licencia a AIRFIBER S.A. 2020" textAlignment="RIGHT" textFill="#c6c6c6">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

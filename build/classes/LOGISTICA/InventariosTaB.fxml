@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="869.0" prefWidth="1710.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LOGISTICA.InventariosTaBController">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="841.0" prefWidth="1686.0" stylesheets="@ArchivoReponsive.css">
+            <children>
+                <TabPane layoutX="5.0" layoutY="45.0" prefHeight="789.0" prefWidth="1677.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="TabGenerados" text="Tipos de Productos">
+                            <content>
+                                <AnchorPane prefHeight="760.0" prefWidth="1636.0" style="-fx-background-color: #dcdcdc;">
+                                    <children>
+                                        <AnchorPane layoutX="30.0" layoutY="65.0" prefHeight="590.0" prefWidth="1645.0" AnchorPane.bottomAnchor="105.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="65.0">
+                                            <children>
+                                                <Pane layoutY="-1.0" prefHeight="33.0" prefWidth="1597.0" style="-fx-background-color: #1e90ff;">
+                                                    <children>
+                                                        <Label layoutX="11.0" layoutY="8.0" text="Categorias" textFill="WHITE">
+                                                            <font>
+                                                                <Font size="13.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button layoutX="45.0" layoutY="47.0" mnemonicParsing="false" onAction="#nuevoCategorias" prefHeight="33.0" prefWidth="101.0" text="Nuevo" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="47.0" />
+                                                <TextField fx:id="buscar" layoutX="182.0" layoutY="48.0" prefHeight="33.0" prefWidth="827.0" promptText="Buscar " AnchorPane.rightAnchor="636.0" AnchorPane.topAnchor="48.0" />
+                                                <TableView fx:id="bodegatipo" layoutY="97.0" prefHeight="557.0" prefWidth="1582.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="97.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="id" prefWidth="61.0" text="Id." />
+                                                        <TableColumn fx:id="producto" prefWidth="103.0" text="Producto" />
+                                                        <TableColumn fx:id="descripcion" prefWidth="512.0" text="Descripcion" />
+                                                        <TableColumn fx:id="tipo" prefWidth="56.0" text="Tipo" />
+                                                        <TableColumn fx:id="impuesto" prefWidth="100.0" text="Impuesto %" />
+                                                        <TableColumn fx:id="disponibles" prefWidth="113.0" text="Disponibles" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="52.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../imagenes/icons8-más-48.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Button fx:id="actualizar" layoutX="5.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="35.0" />
+                                                <ImageView fitHeight="19.0" fitWidth="23.0" layoutX="13.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../imagenes/icons8-refresh.gif" />
+                                                    </image>
+                                                </ImageView>
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="63.0" layoutY="31.0" text="Bodega / Inventario">
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="34.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../imagenes/icons8-mover-por-carretilla-48.png" />
+                                            </image>
+                                        </ImageView>
+                                        <Label layoutX="793.0" layoutY="37.0" text="MODULO BODEGA INVENTARIO - Software de Control ISP v 3.0" textFill="#948d8d">
+                                            <font>
+                                                <Font size="9.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="TabContestados" text="Proveedores">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <AnchorPane prefHeight="869.0" prefWidth="1710.0" style="-fx-background-color: #dcdcdc;">
+                                            <children>
+                                                <AnchorPane layoutX="5.0" layoutY="65.0" prefHeight="801.0" prefWidth="1671.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="34.0" AnchorPane.topAnchor="65.0">
+                                                    <children>
+                                                        <Pane layoutY="-1.0" prefHeight="33.0" prefWidth="1016.0" style="-fx-background-color: #1e90ff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                            <children>
+                                                                <Label layoutX="11.0" layoutY="8.0" text="Proveedores" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </Pane>
+                                                        <Button fx:id="nuevobt" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#nuevopro" prefHeight="33.0" prefWidth="101.0" text="Nuevo" />
+                                                        <TextField fx:id="buscarproveedor" layoutX="140.0" layoutY="47.0" prefHeight="33.0" prefWidth="617.0" promptText="Buscar " AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="944.0" AnchorPane.topAnchor="47.0" />
+                                                        <TableView fx:id="tablaproveedor" layoutX="45.0" layoutY="88.0" prefHeight="525.0" prefWidth="1235.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="188.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="391.0" AnchorPane.topAnchor="88.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="ide" maxWidth="80.0" minWidth="80.0" text="Id." />
+                                                                <TableColumn fx:id="proveedor" maxWidth="-1.0" minWidth="250.0" prefWidth="250.0" text="Proveedor" />
+                                                                <TableColumn fx:id="ruc" maxWidth="-1.0" minWidth="150.0" prefWidth="150.0" text="Ruc" />
+                                                                <TableColumn fx:id="correo" maxWidth="-1.0" minWidth="150.0" prefWidth="150.0" text="e-mail" />
+                                                                <TableColumn fx:id="telefono" maxWidth="-1.0" minWidth="100.0" prefWidth="100.0" text="Telefono" />
+                                                                <TableColumn fx:id="direccion" maxWidth="500.0" minWidth="500.0" prefWidth="392.0" text="Direccion" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                        </TableView>
+                                                        <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="14.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../imagenes/icons8-más-48.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </children>
+                                                </AnchorPane>
+                                                <Label layoutX="63.0" layoutY="31.0" text="Bodega / Inventario">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="34.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../JAVA%20JULIO%2011/Java%20Builder/dd/icons8-vieja-caja-registradora-48.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label layoutX="793.0" layoutY="37.0" text="MODULO BODEGA INVENTARIO - Software de Control ISP v 3.0" textFill="#948d8d">
+                                                    <font>
+                                                        <Font size="9.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="TabCerrados" text="Productos">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="621.0" prefWidth="1663.0" style="-fx-background-color: #dcdcdc;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="8.0">
+                                            <children>
+                                                <AnchorPane layoutX="14.0" layoutY="61.0" prefHeight="684.0" prefWidth="1702.0">
+                                                    <children>
+                                                        <Pane layoutX="1.0" layoutY="8.0" prefHeight="33.0" prefWidth="1542.0" style="-fx-background-color: #1e90ff;">
+                                                            <children>
+                                                                <Label layoutX="11.0" layoutY="8.0" text="Productos" textFill="WHITE">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </Pane>
+                                                        <Button fx:id="nuevo" alignment="CENTER_RIGHT" layoutX="22.0" layoutY="47.0" mnemonicParsing="false" onAction="#nuevoont" prefHeight="33.0" prefWidth="87.0" text="Nuevo" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1593.0" AnchorPane.topAnchor="47.0" />
+                                                        <TextField fx:id="buscarpro" layoutX="1098.0" layoutY="47.0" prefHeight="33.0" prefWidth="362.0" promptText="Ingrese la serie del producto a Buscar" AnchorPane.leftAnchor="1098.0" AnchorPane.rightAnchor="242.0" AnchorPane.topAnchor="47.0" />
+                                                        <TableView fx:id="tablaproducto" layoutY="89.0" prefHeight="581.0" prefWidth="1619.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="89.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="idpructo" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Id." />
+                                                                <TableColumn fx:id="productoont" prefWidth="135.0" text="Producto" />
+                                                                <TableColumn fx:id="proveedoront" prefWidth="132.0" text="Proveedor" />
+                                                                <TableColumn fx:id="serie" prefWidth="105.0" text="No. Serie" />
+                                                                <TableColumn fx:id="macid" prefWidth="88.0" text="Mac ID" />
+                                                                <TableColumn fx:id="pon" prefWidth="75.0" text="PON" />
+                                                                <TableColumn fx:id="precio" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Precio" />
+                                                                <TableColumn fx:id="cliente" prefWidth="75.0" text="Cliente" />
+                                                                <TableColumn fx:id="ingreso" prefWidth="75.0" text="Ingreso" />
+                                                                <TableColumn fx:id="fecha" prefWidth="95.0" text="Salida" />
+                                                                <TableColumn fx:id="IP" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="IP" />
+                                                                <TableColumn fx:id="activa" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="Activa" />
+                                                                <TableColumn fx:id="lote" prefWidth="75.0" text="Lote" />
+                                                                <TableColumn fx:id="metraje" prefWidth="75.0" text="Metraje" />
+                                                                <TableColumn fx:id="estado" prefWidth="75.0" text="Estado" />
+                                                            </columns>
+                                                            <columnResizePolicy>
+                                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                            </columnResizePolicy>
+                                                        </TableView>
+                                                        <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="30.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="1653.2680416107178" AnchorPane.topAnchor="52.0">
+                                                            <image>
+                                                                <Image url="@../../imagenes/icons8-más-48.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                        <Button fx:id="BuscarFECHAS" layoutX="988.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="93.0" text="Buscar" AnchorPane.leftAnchor="988.0" AnchorPane.rightAnchor="621.0" AnchorPane.topAnchor="47.0" />
+                                                        <Button fx:id="reporte" alignment="CENTER_RIGHT" layoutX="234.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="110.0" text="Imprimir Reporte" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="1358.0" AnchorPane.topAnchor="47.0" />
+                                                        <Button fx:id="adigmaterial" layoutX="118.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="106.0" text="Asignar Material" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="1478.0" AnchorPane.topAnchor="47.0" />
+                                          <DatePicker fx:id="inicioreporte" layoutX="694.0" layoutY="47.0" prefHeight="33.0" prefWidth="141.0" promptText="Inicio" AnchorPane.leftAnchor="694.0" AnchorPane.rightAnchor="867.0" AnchorPane.topAnchor="47.0" />
+                                          <DatePicker fx:id="finbusqueda" layoutX="841.0" layoutY="47.0" prefHeight="33.0" prefWidth="126.0" promptText="Fin" AnchorPane.leftAnchor="841.0" AnchorPane.rightAnchor="735.0" AnchorPane.topAnchor="47.0" />
+                                          <ComboBox fx:id="seleccionarproducto" layoutX="462.0" layoutY="47.0" prefHeight="33.0" prefWidth="226.0" promptText="Seleccione el Tipo de producto" AnchorPane.leftAnchor="462.0" AnchorPane.rightAnchor="1014.0" AnchorPane.topAnchor="47.0" />
+                                          <Button fx:id="exportarExel" layoutX="352.0" layoutY="47.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="91.0" text="Excel" AnchorPane.leftAnchor="352.0" AnchorPane.rightAnchor="1259.0" AnchorPane.topAnchor="47.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                                <Label layoutX="63.0" layoutY="22.0" text="Bodega / Inventario">
+                                                    <font>
+                                                        <Font size="17.0" />
+                                                    </font>
+                                                </Label>
+                                                <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="34.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../imagenes/icons8-mover-por-carretilla-48.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <Label layoutX="793.0" layoutY="37.0" text="MODULO BODEGA INVENTARIO - Software de Control ISP v 3.0" textFill="#948d8d">
+                                                    <font>
+                                                        <Font size="9.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <ImageView fitHeight="23.0" fitWidth="375.0" layoutX="29.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../imagenes/barsgreen.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="33.0" layoutY="10.0" text="Inventarios" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../imagenes/icons8-sin-red-48.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Separator layoutX="20.0" layoutY="49.0" prefHeight="0.0" prefWidth="1079.0" />
+        <Label layoutX="1104.0" layoutY="39.0" text="MODULO DE INVENTARIOS - Software de Control ISP v 3.0" textFill="#948d8d">
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

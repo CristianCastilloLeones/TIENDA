@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="769.0" prefWidth="1673.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CLIENTES.NUEVOCLIENTEController">
+   <children>
+      <AnchorPane prefHeight="57.0" prefWidth="1667.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <Label layoutX="1454.0" layoutY="37.0" text="MODULO  CLIENTES - Software de Control ISP v 3.0" textFill="#948d8d">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Rectangle height="30.0" layoutX="17.0" layoutY="7.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#b6e8e7" />
+                        <Stop color="#eaeaea" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="47.0" layoutY="13.0" text="Clientes">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="10.0" layoutY="53.0" prefHeight="679.0" prefWidth="1651.0">
+         <children>
+            <Label layoutX="20.0" layoutY="470.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="18.0" layoutY="44.0" prefHeight="3.0" prefWidth="1406.0" />
+      <ImageView fitHeight="23.0" fitWidth="37.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/icons8-connected-people-48.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <AnchorPane layoutX="19.0" layoutY="47.0" prefHeight="713.0" prefWidth="1624.0" style="-fx-background-color: #eaeaea;">
+         <children>
+            <TabPane fx:id="vistas" layoutX="1.0" layoutY="7.0" prefHeight="700.0" prefWidth="1638.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="datosgenerales" text="Datos Generales">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="20.0" text="Nombres" />
+                              <Label layoutX="10.0" layoutY="88.0" text="Cedula/Pasaporte/RUC" />
+                              <Label layoutX="10.0" layoutY="226.0" text="Direccion" />
+                              <Label layoutX="10.0" layoutY="293.0" text="Telefono Principal" />
+                              <Label layoutX="10.0" layoutY="358.0" text="Telefono 2" />
+                              <Label layoutX="10.0" layoutY="425.0" text="Correo electronico" />
+                              <TextField fx:id="nombres" layoutX="10.0" layoutY="46.0" prefHeight="33.0" prefWidth="357.0" promptText="Nombres Completos" />
+                              <TextField fx:id="ruc" layoutX="10.0" layoutY="114.0" prefHeight="33.0" prefWidth="356.0" promptText="XXXXXXXXX" />
+                              <TextField fx:id="direccion" layoutX="10.0" layoutY="250.0" prefHeight="33.0" prefWidth="727.0" promptText="Calle Principal, secundaria, casa, apt " />
+                              <TextField fx:id="telefo1" layoutX="10.0" layoutY="382.0" prefHeight="33.0" prefWidth="263.0" promptText="XXXXXXX" />
+                              <TextField fx:id="telefono1" layoutX="10.0" layoutY="316.0" prefHeight="33.0" prefWidth="264.0" promptText="XXXXXXX" />
+                              <TextField fx:id="correo" layoutX="10.0" layoutY="450.0" prefHeight="33.0" prefWidth="262.0" promptText="ejemplo@gmail.com" />
+                              <Button fx:id="next1" layoutX="549.0" layoutY="524.0" mnemonicParsing="false" onAction="#siguiente1" prefHeight="74.0" prefWidth="184.0" style="-fx-border-color: #7DCEA0;" text="Siguiente" />
+                              <Label layoutX="10.0" layoutY="157.0" text="Ciudad" />
+                              <ComboBox fx:id="ciudad" layoutX="9.0" layoutY="183.0" prefHeight="33.0" prefWidth="266.0" promptText="Ciudad de Instalacion" />
+                              <TextField fx:id="apellidos" layoutX="396.0" layoutY="46.0" prefHeight="33.0" prefWidth="337.0" promptText="Apellidos Completos" />
+                              <Label layoutX="396.0" layoutY="21.0" text="Apellidos" />
+                              <CheckBox fx:id="pasaporte" layoutX="377.0" layoutY="120.0" mnemonicParsing="false" text="Pasaporte" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="descripcionplan" disable="true" text="Descripcion de Plan">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="anterior2" layoutX="429.0" layoutY="525.0" mnemonicParsing="false" onAction="#Anterior1" prefHeight="80.0" prefWidth="170.0" text="Anterior" />
+                              <Button fx:id="next2" layoutX="609.0" layoutY="525.0" mnemonicParsing="false" onAction="#siguiente2" prefHeight="80.0" prefWidth="170.0" text="Siguiente" />
+                              <ComboBox fx:id="nodo" layoutX="10.0" layoutY="119.0" prefHeight="33.0" prefWidth="234.0" promptText="Seleccione Zona" />
+                              <ComboBox fx:id="plan" layoutX="10.0" layoutY="191.0" prefHeight="33.0" prefWidth="385.0" promptText="Seleccione el perfil de internet" />
+                              <TextField fx:id="detalle" layoutX="10.0" layoutY="259.0" prefHeight="33.0" prefWidth="480.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="costoinstalacion" layoutX="10.0" layoutY="331.0" prefHeight="33.0" prefWidth="240.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="ip4" layoutX="11.0" layoutY="398.0" prefHeight="33.0" prefWidth="240.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <DatePicker fx:id="fechainstalacion" layoutX="11.0" layoutY="533.0" prefHeight="33.0" prefWidth="240.0" />
+                              <Label layoutX="10.0" layoutY="93.0" text="Zona" />
+                              <Label layoutX="10.0" layoutY="163.0" text="Perfil de Internet" />
+                              <Label layoutX="10.0" layoutY="235.0" text="Descripcion" />
+                              <Label layoutX="11.0" layoutY="303.0" text="Costo Instalacion" />
+                              <Label layoutX="11.0" layoutY="374.0" text="IPv4 Asignada " />
+                              <Label layoutX="10.0" layoutY="442.0" text="Serial Pon / Mac ID" />
+                              <TextField fx:id="ponmac" layoutX="10.0" layoutY="465.0" prefHeight="33.0" prefWidth="240.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="11.0" layoutY="509.0" text="Fecha de Instalacion" />
+                              <Label layoutX="284.0" layoutY="303.0" text="Costo Mensual" />
+                              <TextField fx:id="costomensual" layoutX="284.0" layoutY="331.0" prefHeight="33.0" prefWidth="240.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fx:id="detallesplan" fitHeight="354.0" fitWidth="296.0" layoutX="737.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                              <RadioButton fx:id="fb" layoutX="9.0" layoutY="25.0" mnemonicParsing="false" text="Fibra Optica" />
+                              <RadioButton fx:id="re" layoutX="131.0" layoutY="25.0" mnemonicParsing="false" text="Radio Enlace" textFill="#1f498d" />
+                              <Pane fx:id="materialesadicionales" disable="true" layoutX="651.0" layoutY="66.0" prefHeight="107.0" prefWidth="128.0" style="-fx-border-color: #708090;">
+                                 <children>
+                                    <CheckBox fx:id="tubo" layoutX="6.0" layoutY="43.0" mnemonicParsing="false" text="Tubo Galvanizado" />
+                                    <Label layoutX="31.0" layoutY="12.0" text="Adicionales">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="284.0" layoutY="374.0" text="Adicionales" />
+                              <ChoiceBox layoutX="284.0" layoutY="398.0" prefHeight="30.0" prefWidth="241.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="formapago" disable="true" text="Forma y Fecha de pago">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="guardar" defaultButton="true" layoutX="349.0" layoutY="490.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="340.0" text="Guardar" />
+                              <ComboBox fx:id="tipopago" layoutX="12.0" layoutY="52.0" prefHeight="33.0" prefWidth="174.0" promptText="Selecione Tipo pago" />
+                              <ComboBox fx:id="diapago" layoutX="10.0" layoutY="121.0" prefHeight="33.0" prefWidth="262.0" promptText="Selecione el Dia de Pago" />
+                              <ComboBox fx:id="creacionfact" layoutX="9.0" layoutY="190.0" prefHeight="33.0" prefWidth="258.0" promptText="Selecione el de Creacion de Factura" />
+                              <ComboBox fx:id="tiempoespera" layoutX="10.0" layoutY="258.0" prefHeight="33.0" prefWidth="258.0" promptText="Seleccione  Tiempo de Espera" />
+                              <Label layoutX="12.0" layoutY="28.0" text="Pagos" />
+                              <Label layoutX="10.0" layoutY="96.0" text="Día pago de Servicio" />
+                              <Label layoutX="10.0" layoutY="165.0" text="Crear Factura" />
+                              <Label layoutX="10.0" layoutY="234.0" text="Aplicar Corte / suspensión de Servicio" />
+                              <CheckBox fx:id="descuentopordiscapacidad" layoutX="12.0" layoutY="311.0" mnemonicParsing="false" text="Descuento por Discapacidad " />
+                              <CheckBox fx:id="descuentoporterceraedad" layoutX="12.0" layoutY="332.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="176.0" text="Descuento por Tercera Edad" />
+                              <CheckBox fx:id="cheque" layoutX="213.0" layoutY="60.0" mnemonicParsing="false" text="Cheque" />
+                              <CheckBox fx:id="tarjeta" layoutX="287.0" layoutY="61.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="100.0" text="Tarjeta Credito" />
+                              <CheckBox fx:id="efectivo" layoutX="400.0" layoutY="61.0" mnemonicParsing="false" text="Efectivo" />
+                              <ImageView fx:id="imgCargar" fitHeight="102.0" fitWidth="263.0" layoutX="410.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imagenes/cargando.gif" />
+                                 </image>
+                              </ImageView>
+                              <CheckBox fx:id="descuentoporPromo" layoutX="12.0" layoutY="353.0" mnemonicParsing="false" text="Descuento por Promocion" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GESTION.CorteservicioController">
+   <children>
+      <Pane layoutX="14.0" layoutY="14.0" prefHeight="420.0" prefWidth="794.0" style="-fx-border-color: #C71585;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label layoutX="238.0" layoutY="23.0" prefHeight="40.0" prefWidth="264.0" text="Servicio de conexion">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TabPane layoutX="21.0" layoutY="69.0" prefHeight="525.0" prefWidth="1026.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Crear Abonado">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane fx:id="nuevo" layoutX="20.0" layoutY="14.0" prefHeight="402.0" prefWidth="959.0" style="-fx-border-color: #FF4500;">
+                                 <children>
+                                    <Label layoutX="15.0" layoutY="237.0" text="IP" />
+                                    <TextField fx:id="ipser4v" layoutX="14.0" layoutY="262.0" prefHeight="25.0" prefWidth="209.0" />
+                                    <TextField fx:id="abonado" layoutX="14.0" layoutY="156.0" prefHeight="25.0" prefWidth="209.0" />
+                                    <Label layoutX="14.0" layoutY="138.0" text="Abonado" />
+                                    <Label layoutX="15.0" layoutY="183.0" text="Plan Contratado" />
+                                    <Button fx:id="guardarnuevoabon" layoutX="844.0" layoutY="363.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="86.0" text="Guardar" />
+                                    <RadioButton fx:id="RE" layoutX="15.0" layoutY="65.0" mnemonicParsing="false" text="Radio Enlace" />
+                                    <RadioButton fx:id="FO" layoutX="137.0" layoutY="65.0" mnemonicParsing="false" text="Fibra Optica" />
+                                    <ComboBox fx:id="plan" layoutX="14.0" layoutY="202.0" prefHeight="25.0" prefWidth="209.0" promptText="Selecione un Plan" />
+                                    <Label layoutX="15.0" layoutY="36.0" text="Seleccione el Tipo de Red">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="ultimaipUsa" layoutX="49.0" layoutY="237.0" prefHeight="17.0" prefWidth="438.0" text="Label" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Corte de Servicio">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="cortere" layoutX="56.0" layoutY="444.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" text="Corte de Servicio General" />
+                              <Button layoutX="296.0" layoutY="444.0" mnemonicParsing="false" text="Corte Servicio Promesas de Pago" />
+                              <TextArea fx:id="clientesdecorte" layoutX="14.0" layoutY="227.0" prefHeight="200.0" prefWidth="569.0" />
+                              <Label layoutX="14.0" layoutY="210.0" text="Lista de Corte" />
+                              <Label layoutX="197.0" layoutY="210.0" prefHeight="17.0" prefWidth="94.0" text="N° de Corte">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="actual" alignment="CENTER" layoutX="317.0" layoutY="210.0" prefHeight="17.0" prefWidth="84.0" text="0" textAlignment="CENTER" />
+                              <Label layoutX="426.0" layoutY="210.0" text="Total en Corte" />
+                              <Label fx:id="totalcorte" layoutX="529.0" layoutY="210.0" text="0" />
+                              <CheckBox fx:id="activarCriterio" layoutX="329.0" layoutY="155.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="122.0" text="Activar Criterio" AnchorPane.leftAnchor="329.0" AnchorPane.rightAnchor="575.0" AnchorPane.topAnchor="155.0" />
+                              <ComboBox fx:id="mesaplicado" layoutX="12.0" layoutY="154.0" prefHeight="25.0" prefWidth="302.0" promptText="Selecione el mes de control" />
+                              <TextArea fx:id="criteriodecorte" layoutX="14.0" layoutY="14.0" prefHeight="132.0" prefWidth="570.0" />
+                              <Label fx:id="posiblecobro" alignment="CENTER" layoutX="661.0" layoutY="63.0" prefHeight="119.0" prefWidth="329.0" text="0.00" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="47.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="694.0" layoutY="25.0" text="Total de Cobro" />
+                              <ImageView fx:id="imagencarga" fitHeight="150.0" fitWidth="200.0" layoutX="726.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                 <image>
+                                    <Image url="@../imagenes/cargando.gif" />
+                                 </image>
+                              </ImageView>
+                              <ProgressBar fx:id="bar" layoutX="700.0" layoutY="418.0" prefWidth="200.0" progress="0.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Estado de Conexion de Clientes">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tdvjPromesadePago" layoutX="26.0" layoutY="41.0" prefHeight="255.0" prefWidth="569.0">
+                                <columns>
+                                  <TableColumn fx:id="Cleintepromesadepago" prefWidth="289.0" text="Cliente" />
+                                  <TableColumn fx:id="ippromesapago" minWidth="0.0" prefWidth="137.0" text="IP" />
+                                    <TableColumn fx:id="fechadecortepromesapago" minWidth="0.0" prefWidth="140.0" text="Fecha de Corte" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="26.0" layoutY="313.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Aplicar Corte" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Lista de IP PLANES">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="LISTADOIP" layoutX="88.0" layoutY="48.0" prefHeight="299.0" prefWidth="746.0">
+                                <columns>
+                                  <TableColumn fx:id="IDIP" prefWidth="103.0" text="ID" />
+                                    <TableColumn fx:id="PLANIP" minWidth="2.0" prefWidth="47.0" text="PLAN" />
+                                  <TableColumn fx:id="IPACTUA" prefWidth="75.0" text="IP ACTUAL" />
+                                    <TableColumn fx:id="GATE" prefWidth="75.0" text="GATEWAY" />
+                                    <TableColumn fx:id="BROAD" prefWidth="75.0" text="BROADCAST" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="ListadeIP" text="Listado de IP">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="listasdeipusadas" layoutX="19.0" layoutY="60.0" prefHeight="419.0" prefWidth="998.0" tableMenuButtonVisible="true">
+                                <columns>
+                                  <TableColumn fx:id="idcliente" prefWidth="75.0" text="IDCLIENTE" />
+                                  <TableColumn fx:id="clientelistado" prefWidth="75.0" text="CLIENTE" />
+                                    <TableColumn fx:id="iptablalistado" prefWidth="75.0" text="IP" />
+                                    <TableColumn fx:id="serial" prefWidth="75.0" text="SERIAL" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <TextField fx:id="serialip" layoutX="19.0" layoutY="13.0" prefHeight="40.0" prefWidth="251.0" promptText="SERIAL / IP" />
+                              <Button fx:id="buscar" layoutX="280.0" layoutY="13.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="187.0" text="BUSCAR" />
+                              <RadioButton fx:id="FOListado" layoutX="560.0" layoutY="25.0" mnemonicParsing="false" text="FIBRA" />
+                              <RadioButton fx:id="re" layoutX="662.0" layoutY="25.0" mnemonicParsing="false" text="RADIO ENLACE" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
